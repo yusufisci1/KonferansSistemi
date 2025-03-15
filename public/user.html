@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Paneli</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(1.02);
+        }
+
+        button:disabled {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            color: #7f8c8d;
+        }
+
+        .status {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .status span {
+            font-weight: normal;
+            color: #e67e22;
+        }
+
+        /* Butonları yan yana hizalamak için flexbox ekleyelim */
+        .button-container {
+            display: flex;
+            justify-content: center; /* Butonları yatayda ortalar */
+            gap: 20px; /* Butonlar arasında boşluk bırakır */
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kullanıcı Paneli</h1>
+        <div class="status">
+            <p>Toplantı Durumu: <span id="meetingStatus">Henüz Başlatılmadı</span></p>
+            <p>Yoklama Durumu: <span id="attendanceStatus">Henüz Başlatılmadı</span></p>
+            <p>Oylama Durumu: <span id="votingStatus">Henüz Başlatılmadı</span></p>
+        </div>
+
+        <!-- Butonlar için container ekleyip, flexbox ile hizalayalım -->
+        <div class="button-container">
+            <button onclick="requestToSpeak()">Söz İste</button>
+            <button onclick="vote()">Oylamaya Katıl</button>
+            <button onclick="markAttendance()">Yoklamaya Katıl</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const username = prompt("Adınızı girin:");
+
+        let isMeetingStarted = false;
+        let isAttendanceStarted = false;
+        let isVotingStarted = false;
+
+        function requestToSpeak() {
+            if (!isMeetingStarted) {
+                alert("Toplantı henüz başlatılmadı....");
+                return;
+            }
+            alert("Söz isteme talebi gönderildi!");
+            socket.emit("requestToSpeak", username);
+        }
+
+        function vote() {
+            if (!isVotingStarted) {
+                alert("Oylama henüz başlatılmadı....");
+                return;
+            }
+            const userVote = confirm("Evet için Tamam, Hayır için İptal");
+            socket.emit("vote", username, userVote ? "Evet" : "Hayır");
+        }
+
+        function markAttendance() {
+            if (!isAttendanceStarted) {
+                alert("Yoklama henüz başlatılmadı....");
+                return;
+            }
+            alert("Yoklamaya katıldınız!");
+            socket.emit("attendance", username);
+        }
+
+        // Sunucudan toplantı başlangıç sinyali al
+        socket.on("meetingStarted", () => {
+            isMeetingStarted = true;
+            document.getElementById("meetingStatus").innerText = "Başlatıldı";
+        });
+
+        socket.on("attendanceStarted", () => {
+            isAttendanceStarted = true;
+            document.getElementById("attendanceStatus").innerText = "Başlatıldı";
+        });
+
+        socket.on("votingStarted", () => {
+            isVotingStarted = true;
+            document.getElementById("votingStatus").innerText = "Başlatıldı";
+        });
+
+        socket.on("requestApproved", (approvedUsername) => {
+            
+                alert("Başkan söz hakkınızı onayladı!");
+            
+        });
+    </script>
+</body>
+</html>

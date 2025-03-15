@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Başkan Paneli</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 30px;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 18px;
+            color: #7f8c8d;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin-top: 30px;
+            max-width: 1000px;
+        }
+
+        .section {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        li {
+            background-color: #ecf0f1;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li button {
+            background-color: #2ecc71;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        li button:hover {
+            background-color: #27ae60;
+        }
+
+        #meetingStatus, #attendanceStatus, #votingStatus {
+            font-weight: bold;
+            font-size: 20px;
+            color: #16a085;
+        }
+
+        #meetingStatus {
+            color: #e67e22;
+        }
+
+        #attendanceStatus {
+            color: #8e44ad;
+        }
+
+        #votingStatus {
+            color: #2980b9;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Başkan Paneli</h1>
+    
+    <div>
+        <div style="display: inline-block; margin-left: 20px;"> 
+            <button onclick="startMeeting()">Toplantıyı Başlat</button>
+            <p id="meetingStatus">Toplantı başlamadı.</p>
+        </div>
+        <div style="display: inline-block; margin-left: 20px;">
+            <button onclick="startVoting()">Oylamayı Başlat</button>
+            <p id="votingStatus">Oylama başlamadı.</p>
+        </div>
+        <div style="display: inline-block; margin-left: 20px;">
+            <button onclick="startAttendance()">Yoklamayı Başlat</button>
+            <p id="attendanceStatus">Yoklama başlamadı.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Söz İstekleri</h2>
+            <ul id="requests"></ul>
+        </div>
+
+        <div class="section">
+            <h2>Oylama Sonuçları</h2>
+            <ul id="votes"></ul>
+        </div>
+
+        <div class="section">
+            <h2>Yoklamaya Katılanlar</h2>
+            <ul id="attendees"></ul>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        function startMeeting() {
+            console.log("Toplantıyı başlat butonuna tıklandı.");
+            socket.emit("startMeeting");
+        }
+    
+        function startVoting() {
+            console.log("Oylamayı başlat butonuna tıklandı.");
+            socket.emit("startVoting");
+        }
+    
+        function startAttendance() {
+            console.log("Yoklamayı başlat butonuna tıklandı.");
+            socket.emit("startAttendance");
+        }
+
+        function approveRequest(username) {
+            alert(`${username} söz aldı!`);
+            socket.emit("approveRequest", username);
+        }
+    
+        socket.on("meetingStarted", () => {
+            console.log("Toplantı başlatıldı mesajı alındı.");
+            document.getElementById("meetingStatus").innerText = "Toplantı başladı!";
+        });
+    
+        socket.on("attendanceStarted", () => {
+            console.log("Yoklama başlatıldı mesajı alındı.");
+            document.getElementById("attendanceStatus").innerText = "Yoklama başladı!";
+        });
+    
+        socket.on("votingStarted", () => {
+            console.log("Oylama başlatıldı mesajı alındı.");
+            document.getElementById("votingStatus").innerText = "Oylama başladı!";
+        });
+
+        socket.on("newRequest", (username) => {
+            const list = document.getElementById("requests");
+            const item = document.createElement("li");
+            item.innerHTML = `${username} söz istiyor 
+                <button onclick = "approveRequest('${username}')">Onayla</button>`;
+            list.appendChild(item);
+        });
+
+       
+
+        socket.on("voteResult", (voteData) => {
+            const list = document.getElementById("votes");
+            const item = document.createElement("li");
+            item.innerText = `${voteData.username}: ${voteData.choice}`;
+            list.appendChild(item);
+        });
+
+        socket.on("attendanceMarked", (username) => {
+            const list = document.getElementById("attendees");
+            const item = document.createElement("li");
+            item.innerText = `${username} yoklamaya katıldı`;
+            list.appendChild(item);
+        });
+    </script>
+</body>
+</html>

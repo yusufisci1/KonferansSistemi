@@ -32,6 +32,12 @@ io.on("connection", (socket) => {
     if (isMeetingStarted) {
         socket.emit("meetingStarted");
     }
+    if (isAttendanceStarted) {
+        socket.emit("attendanceStarted");
+    }
+    if (isVotingStarted) {
+        socket.emit("votingStarted");
+    }
 
     socket.on("startMeeting", () => {
         console.log("Toplantı başladı!");
@@ -41,10 +47,7 @@ io.on("connection", (socket) => {
 
     // (Diğer event listener'lar burada kalacak)
 
-    socket.on("disconnect", () => {
-        console.log("Bir kullanıcı ayrıldı.");
-    });
-
+   
     socket.on("startAttendance", () => {
         io.emit("attendanceStarted");
         console.log("Yoklama başladı!");

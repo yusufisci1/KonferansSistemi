@@ -21,9 +21,9 @@ app.get("/", (req, res) => {
   res.send("Konferans Sistemi API Çalışıyor!");
 });
 
-let isMeetingStarted = false;
-let isAttendanceStarted = false;
-let isVotingStarted = false;
+let isMeetingStarted = false;  //Toplantı
+let isAttendanceStarted = false; //Yoklama
+let isVotingStarted = false; //Oylama
 
 io.on("connection", (socket) => {
     console.log("Bir kullanıcı bağlandı.");

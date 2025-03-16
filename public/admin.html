@@ -59,51 +59,44 @@
         }
 
         .container {
-            display: flex;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 kolonlu grid yapısı */
+            gap: 20px;
             width: 80%;
             margin-top: 30px;
             max-width: 1000px;
         }
-
+        
         .section {
-            flex: 1;
             padding: 10px;
             text-align: center;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            max-height: 400px; /* Maksimum yükseklik belirliyoruz */
+            overflow-y: auto; /* İçerik fazla olursa kaydırma çubuğu ekler */
         }
-
+        
         .section h2 {
             font-size: 24px;
             margin-bottom: 15px;
         }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            background-color: #ecf0f1;
-            border-radius: 5px;
+        
+        .request, .vote, .attendance {
+            background-color: #fff;
+            border: 1px solid #ddd;
             padding: 10px;
-        }
-
-        li {
-            background-color: #ecf0f1;
-            margin: 10px 0;
-            padding: 15px;
             border-radius: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            margin-bottom: 10px;
         }
-
-        li button {
+        
+        .request button, .vote button, .attendance button {
             background-color: #2ecc71;
             font-size: 14px;
             padding: 5px 10px;
             border-radius: 3px;
         }
-
-        li button:hover {
+        
+        .request button:hover, .vote button:hover, .attendance button:hover {
             background-color: #27ae60;
         }
 
@@ -124,7 +117,6 @@
         #votingStatus {
             color: #2980b9;
         }
-
     </style>
 </head>
 <body>
@@ -146,19 +138,28 @@
     </div>
 
     <div class="container">
+        <!-- Söz İstekleri -->
         <div class="section">
             <h2>Söz İstekleri</h2>
-            <ul id="requests"></ul>
+            <div id="requests" class="request">
+                <!-- Dinamik olarak buraya veriler eklenecek -->
+            </div>
         </div>
 
+        <!-- Oylama Sonuçları -->
         <div class="section">
             <h2>Oylama Sonuçları</h2>
-            <ul id="votes"></ul>
+            <div id="votes" class="vote">
+                <!-- Dinamik olarak buraya veriler eklenecek -->
+            </div>
         </div>
 
+        <!-- Yoklamaya Katılanlar -->
         <div class="section">
             <h2>Yoklamaya Katılanlar</h2>
-            <ul id="attendees"></ul>
+            <div id="attendees" class="attendance">
+                <!-- Dinamik olarak buraya veriler eklenecek -->
+            </div>
         </div>
     </div>
 
@@ -202,25 +203,25 @@
         });
 
         socket.on("newRequest", (username) => {
-            const list = document.getElementById("requests");
-            const item = document.createElement("li");
+            const requestDiv = document.getElementById("requests");
+            const item = document.createElement("div");
             item.innerHTML = `${username.username} söz istiyor 
-                <button onclick = "approveRequest('${username}')">Onayla</button>`;
-            list.appendChild(item);
+                <button onclick="approveRequest('${username}')">Onayla</button>`;
+            requestDiv.appendChild(item);
         });
 
         socket.on("voteResult", (voteData) => {
-            const list = document.getElementById("votes");
-            const item = document.createElement("li");
+            const voteDiv = document.getElementById("votes");
+            const item = document.createElement("div");
             item.innerText = `${voteData.username}: ${voteData.choice}`;
-            list.appendChild(item);
+            voteDiv.appendChild(item);
         });
 
         socket.on("attendanceMarked", (username) => {
-            const list = document.getElementById("attendees");
-            const item = document.createElement("li");
+            const attendeeDiv = document.getElementById("attendees");
+            const item = document.createElement("div");
             item.innerText = `${username.username} yoklamaya katıldı`;
-            list.appendChild(item);
+            attendeeDiv.appendChild(item);
         });
     </script>
 </body>

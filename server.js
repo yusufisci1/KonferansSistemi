@@ -127,6 +127,7 @@ io.on("connection", (socket) => {
         io.emit("requestApproved", { username });
     });
 
+    
     socket.on("disconnect", () => {
         console.log("Bir kullanıcı ayrıldı.");
     });

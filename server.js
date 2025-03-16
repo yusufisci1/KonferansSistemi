@@ -28,10 +28,21 @@ let isVotingStarted = false; //Oylama
 io.on("connection", (socket) => {
     console.log("Bir kullanıcı bağlandı.");
 
+    // Yeni bağlanan kullanıcıya toplantının açık olup olmadığını bildir
+    if (isMeetingStarted) {
+        socket.emit("meetingStarted");
+    }
+
     socket.on("startMeeting", () => {
         console.log("Toplantı başladı!");
         io.emit("meetingStarted");
         isMeetingStarted = true;
+    });
+
+    // (Diğer event listener'lar burada kalacak)
+
+    socket.on("disconnect", () => {
+        console.log("Bir kullanıcı ayrıldı.");
     });
 
     socket.on("startAttendance", () => {

@@ -12,6 +12,7 @@
     <div class="container">
         <h1>Kullanıcı Paneli</h1>
         <div class="status">
+           
             <p>Toplantı Durumu: <span id="meetingStatus">Henüz Başlatılmadı</span></p>
             <p>Yoklama Durumu: <span id="attendanceStatus">Henüz Başlatılmadı</span></p>
             <p>Oylama Durumu: <span id="votingStatus">Henüz Başlatılmadı</span></p>
@@ -22,6 +23,7 @@
             <button onclick="vote()">Oylamaya Katıl</button>
             <button onclick="markAttendance()">Yoklamaya Katıl</button>
         </div>
+        <div id="speakMessage" style="display: none; font-size: 18px; color: green; text-align: left; margin-top: 10px;"></div>
     </div>
 
     <script src="/socket.io/socket.io.js"></script>
@@ -75,7 +77,17 @@
         });
 
         socket.on("requestApproved", (approvedUsername) => {
-            alert("Başkan söz hakkınızı onayladı!");
+    // Kullanıcı ekranındaki mesaj div'ini al
+    const speakMessageDiv = document.getElementById("speakMessage");
+    
+    // Mesajı güncelle ve görünür yap
+    speakMessageDiv.style.display = "block";  // Mesajı görünür yap
+    speakMessageDiv.innerHTML = "Konuşabilirsiniz";  // Mesajı kullanıcıya göster
+    // 10 saniye sonra mesajı gizle
+    setTimeout(() => {
+        speakMessageDiv.style.display = "none";  // Mesajı gizle
+    }, 5000);  // 10000 milisaniye (10 saniye) sonra
+
         });
     </script>
 </body>

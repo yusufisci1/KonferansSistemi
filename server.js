@@ -124,8 +124,10 @@ io.on("connection", (socket) => {
 
     socket.on("approveRequest", (username) => {
         console.log(`${username} söz hakkı onaylandı.`);
+        hasRequestedToSpeak[username] = false;
         io.emit("requestApproved", { username });
-    });
+        
+      });
 
     
     socket.on("disconnect", () => {

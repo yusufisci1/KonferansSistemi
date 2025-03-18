@@ -72,13 +72,11 @@
         }
 
         function approveRequest(button, username) {
-          //  alert(`${username} söz aldı!`);
             socket.emit("approveRequest", username);
         
             // Butonun bulunduğu öğeyi sil
             const item = button.parentElement;
             item.remove();
-            
         }
     
         socket.on("meetingStarted", () => {
@@ -102,7 +100,6 @@
             item.innerHTML = `${username.username} söz istiyor 
             <button onclick="approveRequest(this, '${username.username}')">Onayla</button>`;
             requestDiv.appendChild(item);
-           
         });
 
         socket.on("voteResult", (voteData) => {

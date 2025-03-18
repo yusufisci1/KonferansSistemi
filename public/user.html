@@ -12,7 +12,6 @@
     <div class="container">
         <h1>Kullanıcı Paneli</h1>
         <div class="status">
-           
             <p>Toplantı Durumu: <span id="meetingStatus">Henüz Başlatılmadı</span></p>
             <p>Yoklama Durumu: <span id="attendanceStatus">Henüz Başlatılmadı</span></p>
             <p>Oylama Durumu: <span id="votingStatus">Henüz Başlatılmadı</span></p>
@@ -23,6 +22,7 @@
             <button onclick="vote()">Oylamaya Katıl</button>
             <button onclick="markAttendance()">Yoklamaya Katıl</button>
         </div>
+
         <div id="speakMessage" style="display: none; font-size: 18px; color: green; text-align: left; margin-top: 10px;"></div>
     </div>
 
@@ -35,32 +35,36 @@
         let isAttendanceStarted = false;
         let isVotingStarted = false;
 
+        // Söz isteme fonksiyonu
         function requestToSpeak() {
             if (!isMeetingStarted) {
-                alert("Toplantı henüz başlatılmadı....");
+                alert("Toplantı henüz başlatılmadı.");
                 return;
             }
             socket.emit("requestToSpeak", username);
         }
 
+        // Oylama fonksiyonu
         function vote() {
             if (!isVotingStarted) {
-                alert("Oylama henüz başlatılmadı....");
+                alert("Oylama henüz başlatılmadı.");
                 return;
             }
             const userVote = confirm("Evet için Tamam, Hayır için İptal");
             socket.emit("vote", username, userVote ? "Evet" : "Hayır");
         }
 
+        // Yoklama fonksiyonu
         function markAttendance() {
             if (!isAttendanceStarted) {
-                alert("Yoklama henüz başlatılmadı....");
+                alert("Yoklama henüz başlatılmadı.");
                 return;
             }
             alert("Yoklamaya katıldınız!");
             socket.emit("attendance", username);
         }
 
+        // Socket olayları
         socket.on("meetingStarted", () => {
             isMeetingStarted = true;
             document.getElementById("meetingStatus").innerText = "Başlatıldı";
@@ -77,17 +81,14 @@
         });
 
         socket.on("requestApproved", (approvedUsername) => {
-    // Kullanıcı ekranındaki mesaj div'ini al
-    const speakMessageDiv = document.getElementById("speakMessage");
-    
-    // Mesajı güncelle ve görünür yap
-    speakMessageDiv.style.display = "block";  // Mesajı görünür yap
-    speakMessageDiv.innerHTML = "Konuşabilirsiniz";  // Mesajı kullanıcıya göster
-    // 10 saniye sonra mesajı gizle
-    setTimeout(() => {
-        speakMessageDiv.style.display = "none";  // Mesajı gizle
-    }, 5000);  // 10000 milisaniye (10 saniye) sonra
+            const speakMessageDiv = document.getElementById("speakMessage");
+            speakMessageDiv.style.display = "block";  // Mesajı görünür yap
+            speakMessageDiv.innerHTML = `${approvedUsername.username}, konuşuyor`;  // Mesajı kullanıcıya göster
 
+            // 5 saniye sonra mesajı gizle
+            setTimeout(() => {
+                speakMessageDiv.style.display = "none";  // Mesajı gizle
+            }, 5000);  // 5000 milisaniye (5 saniye) sonra
         });
     </script>
 </body>

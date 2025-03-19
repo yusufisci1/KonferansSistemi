@@ -14,14 +14,17 @@
     <div>
         <div style="display: inline-block; margin-left: 20px;"> 
             <button onclick="startMeeting()">Toplantıyı Başlat</button>
+            <button onclick="endMeeting()">Toplantıyı Bitir</button> <!-- Yeni buton -->
             <p id="meetingStatus">Toplantı başlamadı.</p>
         </div>
         <div style="display: inline-block; margin-left: 20px;">
             <button onclick="startVoting()">Oylamayı Başlat</button>
+            <button onclick="endVoting()">Oylamayı Bitir</button> <!-- Yeni buton -->
             <p id="votingStatus">Oylama başlamadı.</p>
         </div>
         <div style="display: inline-block; margin-left: 20px;">
             <button onclick="startAttendance()">Yoklamayı Başlat</button>
+            <button onclick="endAttendance()">Yoklamayı Bitir</button> <!-- Yeni buton -->
             <p id="attendanceStatus">Yoklama başlamadı.</p>
         </div>
     </div>
@@ -60,6 +63,9 @@
             console.log("Toplantıyı başlat butonuna tıklandı.");
             socket.emit("startMeeting");
         }
+        function endMeeting() {
+            socket.emit("endMeeting"); // Sunucuya toplantıyı bitirme isteği gönder
+        }
     
         function startVoting() {
             console.log("Oylamayı başlat butonuna tıklandı.");
@@ -69,6 +75,9 @@
         function startAttendance() {
             console.log("Yoklamayı başlat butonuna tıklandı.");
             socket.emit("startAttendance");
+        }
+        function endAttendance() {
+            socket.emit("endAttendance"); // Sunucuya yoklamayı bitirme isteği gönder
         }
 
         function approveRequest(button, username) {
@@ -83,10 +92,18 @@
             console.log("Toplantı başlatıldı mesajı alındı.");
             document.getElementById("meetingStatus").innerText = "Toplantı başladı!";
         });
-    
+        
+        socket.on("meetingEnded", () => {
+            document.getElementById("meetingStatus").innerText = "Toplantı bitti!";
+        });
+
         socket.on("attendanceStarted", () => {
             console.log("Yoklama başlatıldı mesajı alındı.");
             document.getElementById("attendanceStatus").innerText = "Yoklama başladı!";
+        });
+
+        socket.on("attendanceEnded", () => {
+            document.getElementById("attendanceStatus").innerText = "Yoklama bitti!";
         });
     
         socket.on("votingStarted", () => {
@@ -109,12 +126,28 @@
             voteDiv.appendChild(item);
         });
 
+        socket.on("updatedRequests", (requestList) => {
+            const requestDiv = document.getElementById("requests");
+            requestDiv.innerHTML = ""; // Tüm söz isteklerini kaldır
+        
+            requestList.forEach((username) => {
+                const item = document.createElement("div");
+                item.innerHTML = `${username} söz istiyor 
+                <button onclick="approveRequest(this, '${username}')">Onayla</button>`;
+                requestDiv.appendChild(item);
+            });
+        });
+
+
+
         socket.on("attendanceMarked", (username) => {
             const attendeeDiv = document.getElementById("attendees");
             const item = document.createElement("div");
             item.innerText = `${username.username} yoklamaya katıldı`;
             attendeeDiv.appendChild(item);
         });
+
+       
     </script>
 </body>
 </html>

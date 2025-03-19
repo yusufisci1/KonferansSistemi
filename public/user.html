@@ -72,14 +72,26 @@
             document.getElementById("usernameDisplay").innerText = username;
         });
 
+        socket.on("meetingEnded", () => {
+            document.getElementById("meetingStatus").innerText = "Toplantı bitti!";
+        });
+
         socket.on("attendanceStarted", () => {
             isAttendanceStarted = true;
             document.getElementById("attendanceStatus").innerText = "Başlatıldı";
         });
 
+        socket.on("attendanceEnded", () => {
+            document.getElementById("attendanceStatus").innerText = "Yoklama bitti!";
+        });
+
         socket.on("votingStarted", () => {
             isVotingStarted = true;
             document.getElementById("votingStatus").innerText = "Başlatıldı";
+        });
+
+        socket.on("votingEnded", () => {
+            document.getElementById("votingStatus").innerText = "Oylama bitti!";
         });
 
         socket.on("requestApproved", (approvedUsername) => {

@@ -42,17 +42,49 @@ io.on("connection", (socket) => {
     isMeetingStarted = true;
   });
 
+  socket.on("endMeeting", () => {
+    console.log("Toplantı sona erdi!");
+
+    // Konuşma isteklerini temizle
+    hasRequestedToSpeak = {}; // Tüm söz taleplerini sil
+
+    // Tüm istemcilere toplantının bittiğini ve konuşma isteklerinin sıfırlandığını bildir
+    io.emit("meetingEnded");
+    io.emit("updatedRequests", []); // Başkan panelindeki listeyi sıfırla
+
+    // Toplantıyı sıfırla
+    isMeetingStarted = false;
+});
+
   socket.on("startAttendance", () => {
     console.log("Yoklama başladı!");
     io.emit("attendanceStarted");
     isAttendanceStarted = true;
   });
 
+  socket.on("endAttendance", () => {
+    console.log("Yoklama sona erdi!");
+     // Tüm istemcilere yoklamanın bittiğini ve listelerin sıfırlandığını bildir
+    io.emit("attendanceEnded");
+    // Yoklama durumunu sıfırla
+    isAttendanceStarted = false;
+});
+
   socket.on("startVoting", () => {
     console.log("Oylama başladı!");
     io.emit("votingStarted");
     isVotingStarted = true;
   });
+
+  socket.on("endVoting", () => {
+    console.log("Oylama sona erdi!");
+
+    // Tüm istemcilere oylamanın bittiğini bildir (Listeyi değiştirme!)
+    io.emit("votingEnded");
+
+    // Oylama durumunu sıfırla
+    isVotingStarted = false;
+});
 
   socket.on("requestToSpeak", (username) => {
     if (!isMeetingStarted) return socket.emit("errorMessage", "Toplantı başlamadı!");
@@ -98,7 +130,7 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     console.log("Bir kullanıcı ayrıldı..");
-  //  hasRequestedToSpeak[username] = false;
+   
   });
 });
 

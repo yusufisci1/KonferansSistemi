@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         <h1>Kullanıcı Paneli</h1>
+        <p>Hoş geldiniz, <span id="usernameDisplay">...</span></p>
         <div class="status">
             <p>Toplantı Durumu: <span id="meetingStatus">Henüz Başlatılmadı</span></p>
             <p>Yoklama Durumu: <span id="attendanceStatus">Henüz Başlatılmadı</span></p>
@@ -68,6 +69,7 @@
         socket.on("meetingStarted", () => {
             isMeetingStarted = true;
             document.getElementById("meetingStatus").innerText = "Başlatıldı";
+            document.getElementById("usernameDisplay").innerText = username;
         });
 
         socket.on("attendanceStarted", () => {
@@ -81,14 +83,19 @@
         });
 
         socket.on("requestApproved", (approvedUsername) => {
+          if (approvedUsername.username===username){
             const speakMessageDiv = document.getElementById("speakMessage");
             speakMessageDiv.style.display = "block";  // Mesajı görünür yap
-            speakMessageDiv.innerHTML = `${approvedUsername.username}, konuşuyor`;  // Mesajı kullanıcıya göster
+            speakMessageDiv.innerHTML = `Söz Sizde Konuşabilirsiniz...`;  // Mesajı kullanıcıya göster
 
             // 5 saniye sonra mesajı gizle
             setTimeout(() => {
                 speakMessageDiv.style.display = "none";  // Mesajı gizle
             }, 5000);  // 5000 milisaniye (5 saniye) sonra
+         }else {}
+            
+         
+
         });
     </script>
 </body>

@@ -98,6 +98,7 @@ io.on("connection", (socket) => {
 
   socket.on("disconnect", () => {
     console.log("Bir kullanıcı ayrıldı..");
+  //  hasRequestedToSpeak[username] = false;
   });
 });
 

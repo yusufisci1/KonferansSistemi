@@ -76,6 +76,9 @@
             console.log("Yoklamayı başlat butonuna tıklandı.");
             socket.emit("startAttendance");
         }
+        function endVoting() {
+            socket.emit("endVoting"); // Sunucuya oylamayı bitirme isteği gönder
+        }
         function endAttendance() {
             socket.emit("endAttendance"); // Sunucuya yoklamayı bitirme isteği gönder
         }

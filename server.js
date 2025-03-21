@@ -68,10 +68,13 @@ io.on("connection", (socket) => {
 
     if (Object.keys(hasJoinedAttendance).length > 0) {
         const doc = new PDFDocument();
+        const now = new Date();
+        const formattedDate = now.toLocaleString("tr-TR"); // Türkçe tarih formatı
         const filePath = `public/reports/yoklama_${Date.now()}.pdf`;
 
         doc.pipe(fs.createWriteStream(filePath));
         doc.fontSize(20).text("Yoklama Listesi", { align: "center" });
+        doc.fontSize(12).text(`Tarih: ${formattedDate}`, { align: "center" }); // Zamanı ekle
         doc.moveDown();
 
         Object.keys(hasJoinedAttendance).forEach((username, index) => {
@@ -101,10 +104,13 @@ io.on("connection", (socket) => {
 
     if (Object.keys(hasVoted).length > 0) {
         const doc = new PDFDocument();
+        const now = new Date();
+        const formattedDate = now.toLocaleString("tr-TR"); // Türkçe tarih formatı
         const filePath = `public/reports/oylama_${Date.now()}.pdf`;
 
         doc.pipe(fs.createWriteStream(filePath));
         doc.fontSize(20).text("Oylama Sonuçları", { align: "center" });
+        doc.fontSize(12).text(`Tarih: ${formattedDate}`, { align: "center" }); // Zamanı ekle
         doc.moveDown();
 
         Object.entries(hasVoted).forEach(([username, choice], index) => {

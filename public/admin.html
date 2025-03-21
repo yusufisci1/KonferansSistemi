@@ -141,7 +141,27 @@
             });
         });
 
+        socket.on("updatedAttendance", (attendanceList) => {
+            const attendanceDiv = document.getElementById("attendees");
+            attendanceDiv.innerHTML = ""; // Listeyi temizle
+        
+            attendanceList.forEach((username) => {
+                const item = document.createElement("div");
+                item.innerText = `${username} yoklamaya katıldı`;
+                attendanceDiv.appendChild(item);
+            });
+        });
 
+        socket.on("updatedVotes", (voteList) => {
+            const voteDiv = document.getElementById("votes");
+            voteDiv.innerHTML = ""; // Listeyi temizle
+        
+            voteList.forEach((voteData) => {
+                const item = document.createElement("div");
+                item.innerText = `${voteData.username}: ${voteData.choice}`;
+                voteDiv.appendChild(item);
+            });
+        });
 
         socket.on("attendanceMarked", (username) => {
             const attendeeDiv = document.getElementById("attendees");

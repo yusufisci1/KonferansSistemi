@@ -4,7 +4,8 @@ const http = require("http");
 const socketIo = require("socket.io");
 const mongoose = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
-
+const PDFDocument = require("pdfkit");
+const fs = require("fs");
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
@@ -63,9 +64,28 @@ io.on("connection", (socket) => {
   });
 
   socket.on("endAttendance", () => {
-    console.log("Yoklama sona erdi!");
-     // Tüm istemcilere yoklamanın bittiğini ve listelerin sıfırlandığını bildir
+    console.log("Yoklama sona erdi! PDF oluşturuluyor...");
+
+    if (Object.keys(hasJoinedAttendance).length > 0) {
+        const doc = new PDFDocument();
+        const filePath = `public/reports/yoklama_${Date.now()}.pdf`;
+
+        doc.pipe(fs.createWriteStream(filePath));
+        doc.fontSize(20).text("Yoklama Listesi", { align: "center" });
+        doc.moveDown();
+
+        Object.keys(hasJoinedAttendance).forEach((username, index) => {
+            doc.fontSize(14).text(`${index + 1}. ${username}`);
+        });
+
+        doc.end();
+        console.log(`Yoklama listesi PDF olarak kaydedildi: ${filePath}`);
+    }
+
+    // Listeyi temizle
+    hasJoinedAttendance = {};
     io.emit("attendanceEnded");
+    io.emit("updatedAttendance", []);
     // Yoklama durumunu sıfırla
     isAttendanceStarted = false;
 });
@@ -77,12 +97,29 @@ io.on("connection", (socket) => {
   });
 
   socket.on("endVoting", () => {
-    console.log("Oylama sona erdi!");
+    console.log("Oylama sona erdi! PDF oluşturuluyor...");
 
-    // Tüm istemcilere oylamanın bittiğini bildir (Listeyi değiştirme!)
+    if (Object.keys(hasVoted).length > 0) {
+        const doc = new PDFDocument();
+        const filePath = `public/reports/oylama_${Date.now()}.pdf`;
+
+        doc.pipe(fs.createWriteStream(filePath));
+        doc.fontSize(20).text("Oylama Sonuçları", { align: "center" });
+        doc.moveDown();
+
+        Object.entries(hasVoted).forEach(([username, choice], index) => {
+            doc.fontSize(14).text(`${index + 1}. ${username}: ${choice}`);
+        });
+
+        doc.end();
+        console.log(`Oylama sonuçları PDF olarak kaydedildi: ${filePath}`);
+    }
+
+    // Listeyi temizle
+    hasVoted = {};
     io.emit("votingEnded");
-
-    // Oylama durumunu sıfırla
+    io.emit("updatedVotes", []);
+   // Oylama durumunu sıfırla
     isVotingStarted = false;
 });
 

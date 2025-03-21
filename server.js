@@ -154,7 +154,7 @@ io.on("connection", (socket) => {
     if (!isVotingStarted) return socket.emit("errorMessage", "Oylama başlamadı!");
     if (hasVoted[username]) return socket.emit("errorMessage", "Zaten oy kullandınız!");
     
-    hasVoted[username] = true;
+    hasVoted[username] = choice;
     console.log(`${username} oylamada ${choice} dedi.`);
     io.emit("voteResult", { username, choice });
   });

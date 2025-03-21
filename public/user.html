@@ -51,8 +51,9 @@
                 alert("Oylama henüz başlatılmadı.");
                 return;
             }
-            const userVote = confirm("Evet için Tamam, Hayır için İptal");
-            socket.emit("vote", username, userVote ? "Evet" : "Hayır");
+            const userVote = confirm("Kabul için Tamam, Red için İptal");
+            const voteChoice = userVote ? " Kabul" : "Red";
+            socket.emit("vote", username, voteChoice);
         }
 
         // Yoklama fonksiyonu

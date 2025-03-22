@@ -1,0 +1,22 @@
+[22.03.2025 21:52:23] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 21:52:24] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 21:52:55] Bir kullanıcı bağlandı.
+[22.03.2025 21:52:57] Bir kullanıcı bağlandı.
+[22.03.2025 21:53:02] Toplantı başladı!
+[22.03.2025 21:53:10] gülhanisci söz istedi.
+[22.03.2025 21:53:22] Bir kullanıcı bağlandı.
+[22.03.2025 21:53:24] berenisci söz istedi.
+[22.03.2025 21:53:36] Oylama başladı!
+[22.03.2025 21:53:40] berenisci oylamada  Kabul dedi.
+[22.03.2025 21:53:46] gülhanisci oylamada Red dedi.
+[22.03.2025 21:53:53] Oylama sona erdi! PDF oluşturuluyor...
+[22.03.2025 21:53:53] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1742669633855.pdf
+[22.03.2025 21:54:00] Yoklama başladı!
+[22.03.2025 21:54:04] gülhanisci yoklamaya katıldı.
+[22.03.2025 21:54:07] berenisci yoklamaya katıldı.
+[22.03.2025 21:54:12] Yoklama sona erdi! PDF oluşturuluyor...
+[22.03.2025 21:54:12] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1742669652823.pdf
+[22.03.2025 21:54:19] Bir kullanıcı ayrıldı..
+[22.03.2025 21:54:21] Bir kullanıcı ayrıldı..
+[22.03.2025 21:54:25] Toplantı sona erdi!
+[22.03.2025 21:54:34] Bir kullanıcı ayrıldı..

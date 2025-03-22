@@ -6,6 +6,33 @@ const mongoose = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 const PDFDocument = require("pdfkit");
 const fs = require("fs");
+const path = require("path");
+// 📌 Log dosyasının yolu
+const logFilePath = path.join(__dirname, "logs", "logs.txt");
+
+// 📌 Eğer logs klasörü yoksa oluştur
+if (!fs.existsSync(path.join(__dirname, "logs"))) {
+    fs.mkdirSync(path.join(__dirname, "logs"));
+}
+
+// 📌 Orijinal console.log fonksiyonunu sakla
+const originalConsoleLog = console.log;
+
+// 📌 Yeni console.log fonksiyonu (Logları hem terminale hem dosyaya kaydeder)
+console.log = function (message) {
+    const logMessage = `[${new Date().toLocaleString()}] ${message}\n`;
+
+    // Terminale yazdır
+    originalConsoleLog(logMessage);
+
+    // 📌 logs.txt dosyasına ekle (hata olursa terminale yazdır)
+    fs.appendFile(logFilePath, logMessage, (err) => {
+        if (err) {
+            originalConsoleLog("❌ Log dosyasına yazılırken hata oluştu:", err);
+        }
+    });
+};
+
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {

@@ -29,10 +29,11 @@
             const data = await response.json();
 
             if (response.ok) {
+                
                 localStorage.setItem("username", username);
-                if (data.role === "admin") {
+                 if (data.role === "admin") {
                     window.location.href = "admin.html"; // Başkan ekranı
-                } else {
+                   } else {
                     window.location.href = "user.html"; // Kullanıcı ekranı
                 }
             } else {

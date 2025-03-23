@@ -36,6 +36,13 @@
         let isAttendanceStarted = false;
         let isVotingStarted = false;
 
+         // Kullanıcı bağlandığında sunucuya bildir
+    socket.emit("userConnected", { username });
+
+    socket.on("welcomeMessage", (message) => {
+        console.log(message);
+    });
+
         // Söz isteme fonksiyonu
         function requestToSpeak() {
             if (!isMeetingStarted) {

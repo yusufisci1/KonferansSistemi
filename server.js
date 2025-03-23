@@ -4,6 +4,7 @@ const http = require("http");
 const socketIo = require("socket.io");
 const mongoose = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
+const connectedUsers = {}; // 📌 Kullanıcıları takip eden nesne (Global olarak tanımlandı!)
 const PDFDocument = require("pdfkit");
 const fs = require("fs");
 const path = require("path");
@@ -58,7 +59,18 @@ let hasJoinedMeeting = {};
 let hasVoted = {};
 
 io.on("connection", (socket) => {
-  console.log("Bir kullanıcı bağlandı.");
+ 
+ // console.log("Bir kullanıcı bağlandı.");
+
+ socket.on("userConnected", ({ username }) => {
+  if (username) {
+      connectedUsers[socket.id] = username; // Kullanıcı adını socket.id ile eşleştir
+      console.log(`🔹 Kullanıcı bağlandı: ${username}`);
+      socket.emit("welcomeMessage", `👋 Hoş geldin, ${username}!`);
+  } else {
+      console.log("⚠️ Kullanıcı adı alınamadı!");
+  }
+});
 
   if (isMeetingStarted) socket.emit("meetingStarted");
   if (isAttendanceStarted) socket.emit("attendanceStarted");
@@ -72,14 +84,10 @@ io.on("connection", (socket) => {
 
   socket.on("endMeeting", () => {
     console.log("Toplantı sona erdi!");
-
-    // Konuşma isteklerini temizle
-    hasRequestedToSpeak = {}; // Tüm söz taleplerini sil
-
+     hasRequestedToSpeak = {}; // Tüm söz taleplerini sil
     // Tüm istemcilere toplantının bittiğini ve konuşma isteklerinin sıfırlandığını bildir
     io.emit("meetingEnded");
     io.emit("updatedRequests", []); // Başkan panelindeki listeyi sıfırla
-
     // Toplantıyı sıfırla
     isMeetingStarted = false;
 });
@@ -199,7 +207,13 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    console.log("Bir kullanıcı ayrıldı..");
+    const username = connectedUsers[socket.id]; // Ayrılan kullanıcının adını bul
+    if (username) {
+        console.log(`❌ Kullanıcı ayrıldı: ${username}`);
+        delete connectedUsers[socket.id]; // Kullanıcıyı listeden kaldır
+    } else {
+        console.log(`❌ Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ${socket.id})`);
+    }
    
   });
 });

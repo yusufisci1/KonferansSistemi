@@ -20,3 +20,171 @@
 [22.03.2025 21:54:21] Bir kullanıcı ayrıldı..
 [22.03.2025 21:54:25] Toplantı sona erdi!
 [22.03.2025 21:54:34] Bir kullanıcı ayrıldı..
+[22.03.2025 22:19:09] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:19:09] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:21:38] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:21:38] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:21:49] undefined adlı kullanıcı bağlandı.
+[22.03.2025 22:21:55] Bir kullanıcı ayrıldı..
+[22.03.2025 22:22:03] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:22:03] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:22:30] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:22:31] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:22:31] undefined adlı kullanıcı bağlandı.
+[22.03.2025 22:24:24] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:24:24] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:24:24] undefined adlı kullanıcı bağlandı.
+[22.03.2025 22:24:36] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:24:36] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:24:43] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:24:43] undefined adlı kullanıcı bağlandı.
+[22.03.2025 22:24:43] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:25:03] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:25:03] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:25:21] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:25:21] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:25:22] Bir kullanıcı bağlandı.
+[22.03.2025 22:25:45] Bir kullanıcı ayrıldı..
+[22.03.2025 22:28:41] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:28:41] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:29:44] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:29:44] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:29:47] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:29:47] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:30:08] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:30:08] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:32:22] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:32:22] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:32:59] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:32:59] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:33:09] Bir kullanıcı bağlandı.
+[22.03.2025 22:34:37] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 22:34:37] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 22:34:37] Bir kullanıcı bağlandı.
+[22.03.2025 22:34:41] Bir kullanıcı ayrıldı..
+[22.03.2025 22:34:45] Bir kullanıcı bağlandı.
+[22.03.2025 22:35:05] Bir kullanıcı ayrıldı..
+[22.03.2025 23:35:51] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:35:51] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:39:27] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:39:27] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:39:30] Bir kullanıcı bağlandı.
+[22.03.2025 23:39:42] Bir kullanıcı ayrıldı..
+[22.03.2025 23:40:06] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:40:06] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:44:47] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:44:47] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:44:56] Bir kullanıcı bağlandı.
+[22.03.2025 23:44:59] transport close ayrıldı.
+[22.03.2025 23:45:12] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:45:12] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:45:14] Bir kullanıcı bağlandı.
+[22.03.2025 23:45:16] undefined ayrıldı.
+[22.03.2025 23:45:59] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:45:59] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:50:50] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:50:50] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:51:06] Toplantı başladı!
+[22.03.2025 23:51:20] Bir kullanıcı ayrıldı..
+[22.03.2025 23:51:21] Bir kullanıcı ayrıldı..
+[22.03.2025 23:51:52] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:51:52] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:52:28] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:52:28] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:56:46] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:56:46] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:57:16] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:57:16] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:58:11] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:58:12] ✅ MongoDB bağlantısı başarılı!
+[22.03.2025 23:59:28] 🚀 Server 3000 portunda çalışıyor!
+[22.03.2025 23:59:28] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 00:00:16] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 00:00:16] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 00:00:47] Bir kullanıcı bağlandı.
+[23.03.2025 00:00:52] Toplantı başladı!
+[23.03.2025 00:00:59] Bir kullanıcı bağlandı.
+[23.03.2025 00:01:07] berenisci söz istedi.
+[23.03.2025 00:01:11] berenisci söz hakkı onaylandı.
+[23.03.2025 00:01:18] Bir kullanıcı ayrıldı..
+[23.03.2025 00:01:19] Bir kullanıcı ayrıldı..
+[23.03.2025 00:12:34] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 00:12:34] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 00:15:40] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 00:15:40] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 00:16:33] Toplantı başladı!
+[23.03.2025 00:16:36] Toplantı sona erdi!
+[23.03.2025 00:16:54] Bir kullanıcı ayrıldı..
+[23.03.2025 00:20:15] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 00:20:15] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 00:20:19] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 00:20:19] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 00:20:38] Toplantı başladı!
+[23.03.2025 00:21:36] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 00:21:36] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 00:21:39] Bir kullanıcı ayrıldı..
+[23.03.2025 00:22:09] Bir kullanıcı ayrıldı..
+[23.03.2025 00:22:46] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 00:22:46] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 00:31:38] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 00:31:38] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:21:10] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:21:10] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:29:53] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:29:53] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:30:20] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:30:20] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:30:22] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:30:22] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:33:29] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:33:29] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:33:51] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:33:51] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:37:27] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:37:27] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:37:42] Bir kullanıcı bağlandı.
+[23.03.2025 08:38:59] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:38:59] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:38:59] Bir kullanıcı bağlandı.
+[23.03.2025 08:39:06] Bir kullanıcı ayrıldı..
+[23.03.2025 08:39:08] Bir kullanıcı bağlandı.
+[23.03.2025 08:39:21] Bir kullanıcı bağlandı.
+[23.03.2025 08:39:21] 🔹 Kullanıcı bağlandı: berenisci
+[23.03.2025 08:39:49] Bir kullanıcı bağlandı.
+[23.03.2025 08:39:49] 🔹 Kullanıcı bağlandı: gülhanisci
+[23.03.2025 08:40:11] Bir kullanıcı ayrıldı..
+[23.03.2025 08:40:11] Bir kullanıcı ayrıldı..
+[23.03.2025 08:41:54] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:41:54] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:42:23] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:42:23] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:43:55] Toplantı başladı!
+[23.03.2025 08:44:01] 🔹 Kullanıcı bağlandı: gülhanisci
+[23.03.2025 08:44:06] gülhanisci söz istedi.
+[23.03.2025 08:44:10] gülhanisci söz hakkı onaylandı.
+[23.03.2025 08:44:19] gülhanisci söz istedi.
+[23.03.2025 08:44:21] gülhanisci söz hakkı onaylandı.
+[23.03.2025 08:44:35] Bir kullanıcı ayrıldı..
+[23.03.2025 08:44:49] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:44:49] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:44:57] Kullanıcı ayrıldı..
+[23.03.2025 08:50:39] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:50:39] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:50:57] Toplantı başladı!
+[23.03.2025 08:51:02] 🔹 Kullanıcı bağlandı: gülhanisci
+[23.03.2025 08:53:19] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:53:19] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:53:21] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:53:21] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:53:25] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:53:25] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:54:30] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:54:30] ✅ MongoDB bağlantısı başarılı!
+[23.03.2025 08:54:39] 🔹 Kullanıcı bağlandı: gülhanisci
+[23.03.2025 08:54:50] Toplantı başladı!
+[23.03.2025 08:54:52] gülhanisci söz istedi.
+[23.03.2025 08:54:55] gülhanisci söz hakkı onaylandı.
+[23.03.2025 08:55:01] ❌ Kullanıcı ayrıldı: gülhanisci
+[23.03.2025 08:55:09] ❌ Bilinmeyen bir kullanıcı ayrıldı (Socket ID: rYOQI0qe_gby97z8AAAB)
+[23.03.2025 08:55:18] 🚀 Server 3000 portunda çalışıyor!
+[23.03.2025 08:55:18] ✅ MongoDB bağlantısı başarılı!

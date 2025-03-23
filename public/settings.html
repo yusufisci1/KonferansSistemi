@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayarlar - Kullanıcı Ekle</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="stylesetting.css"> <!-- Harici CSS dosyası -->
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Başkan Paneli - Kullanıcı Ekle</h2>
+
+        <label for="username">Kullanıcı Adı:</label>
+        <input type="text" id="username" placeholder="Kullanıcı Adı">
+
+        <label for="password">Şifre:</label>
+        <input type="password" id="password" placeholder="Şifre">
+
+        <label for="tc">TC Kimlik No:</label>
+        <input type="text" id="tc" placeholder="TC Kimlik No">
+
+        <label for="mail">E-Posta:</label>
+        <input type="email" id="mail" placeholder="E-Posta">
+
+        <label for="address">Adres:</label>
+        <input type="text" id="address" placeholder="Adres">
+
+        <label for="phone">Telefon:</label>
+        <input type="text" id="phone" placeholder="Telefon">
+
+        <label for="birt_date">Doğum Tarihi:</label>
+        <input type="date" id="birt_date">
+
+        <label for="gender">Cinsiyet:</label>
+        <select id="gender">
+            <option value="Erkek">Erkek</option>
+            <option value="Kadın">Kadın</option>
+        </select>
+
+        <label for="ad">Ad:</label>
+        <input type="text" id="ad" placeholder="Ad">
+
+        <label for="soyad">Soyad:</label>
+        <input type="text" id="soyad" placeholder="Soyad">
+
+        <button class="submit-btn" onclick="addParticipant()">Kullanıcı Ekle</button>
+
+        <p id="statusMessage"></p>
+    </div>
+
+    <script>
+        const socket = io();
+
+        function addParticipant() {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const tc = document.getElementById("tc").value.trim();
+            const mail = document.getElementById("mail").value.trim();
+            const address = document.getElementById("address").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const birt_date = document.getElementById("birt_date").value;
+            const gender = document.getElementById("gender").value;
+            const ad = document.getElementById("ad").value.trim();
+            const soyad = document.getElementById("soyad").value.trim();
+            const statusMessage = document.getElementById("statusMessage");
+
+            if (!username || !password || !tc || !mail || !address || !phone || !birt_date || !gender || !ad || !soyad) {
+                statusMessage.style.color = "red";
+                statusMessage.innerText = "❌ Tüm alanları doldurmalısınız!";
+                return;
+            }
+
+            console.log(`📤 Katılımcı ekleme isteği gönderiliyor: ${username}`);
+            socket.emit("addParticipant", { username, password, tc, mail, address, phone, birt_date, gender, ad, soyad });
+        }
+
+        socket.on("participantAdded", ({ username }) => {
+            console.log(`✅ Yeni katılımcı eklendi: ${username}`);
+            const statusMessage = document.getElementById("statusMessage");
+            statusMessage.style.color = "green";
+            statusMessage.innerText = `✅ ${username} başarıyla eklendi!`;
+        });
+
+        socket.on("errorMessage", (message) => {
+            const statusMessage = document.getElementById("statusMessage");
+            statusMessage.style.color = "red";
+            statusMessage.innerText = message;
+        });
+    </script>
+
+</body>
+</html>

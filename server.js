@@ -4,6 +4,7 @@ const http = require("http");
 const socketIo = require("socket.io");
 const mongoose = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
+const User = require("./models/user"); // Kullanıcı modelini içe aktar
 const connectedUsers = {}; // 📌 Kullanıcıları takip eden nesne (Global olarak tanımlandı!)
 const PDFDocument = require("pdfkit");
 const fs = require("fs");
@@ -65,7 +66,7 @@ io.on("connection", (socket) => {
  socket.on("userConnected", ({ username }) => {
   if (username) {
       connectedUsers[socket.id] = username; // Kullanıcı adını socket.id ile eşleştir
-      console.log(`🔹 Kullanıcı bağlandı: ${username}`);
+      console.log(`Kullanıcı bağlandı: ${username}`);
       socket.emit("welcomeMessage", `👋 Hoş geldin, ${username}!`);
   } else {
       console.log("⚠️ Kullanıcı adı alınamadı!");
@@ -209,13 +210,58 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     const username = connectedUsers[socket.id]; // Ayrılan kullanıcının adını bul
     if (username) {
-        console.log(`❌ Kullanıcı ayrıldı: ${username}`);
+        console.log(`Kullanıcı ayrıldı: ${username}`);
         delete connectedUsers[socket.id]; // Kullanıcıyı listeden kaldır
     } else {
-        console.log(`❌ Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ${socket.id})`);
+     //   console.log(`Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ${socket.id})`);
     }
    
   });
+
+
+  socket.on("addParticipant", async (data) => {
+    try {
+        const { username, password, tc, mail, address, phone, birt_date, gender, ad, soyad } = data;
+
+        if (!username || !password || !tc || !mail || !address || !phone || !birt_date || !gender || !ad || !soyad) {
+            socket.emit("errorMessage", "❌ Tüm alanları doldurmalısınız!");
+            return;
+        }
+
+        let existingUser = await User.findOne({ username });
+
+        if (existingUser) {
+            socket.emit("errorMessage", "❌ Bu kullanıcı zaten kayıtlı!");
+            return;
+        }
+
+        const newUser = new User({
+            username,
+            password,
+            role: "user",
+            tc,
+            mail,
+            address,
+            phone,
+            birt_date,
+            gender,
+            ad,
+            soyad
+        });
+
+        await newUser.save();
+        console.log(`✅ Yeni kullanıcı eklendi: ${username}`);
+
+        io.emit("participantAdded", { username });
+
+    } catch (error) {
+        console.error("❌ Kullanıcı eklenirken hata oluştu:", error);
+        socket.emit("errorMessage", "❌ Kullanıcı eklenirken bir hata oluştu!");
+    }
+});
+
+
+
 });
 
 const PORT = process.env.PORT || 3000;

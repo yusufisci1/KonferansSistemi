@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <button class="settings-button" onclick="goToSettings()">⚙ Ayarlar</button>
-    <title>Başkan Paneli</title>
+    <div class="button-container">
+        <button class="settings-button" onclick="goToSettings()">Kullanıcı Ekle</button>
+        <button class="report-button" onclick="goToReports()">Reports</button>
+    </div> <title>Başkan Paneli</title>
     <!-- CSS dosyasını bağladık -->
     <link href="styleadmin.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></script>
@@ -62,6 +64,10 @@
 
         function goToSettings() {
             window.location.href = "settings.html"; // Ayarlar sayfasına yönlendir
+        }
+
+        function goToReports() {
+            window.location.href = "reports.html"; // Raporlar sayfasına yönlendirme
         }
 
         function startMeeting() {

@@ -1,0 +1,60 @@
+/* Genel Konteyner */
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Tarih Seçme Alanı */
+.date-filter {
+    margin-bottom: 20px;
+}
+
+.date-filter label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.date-filter input {
+    padding: 8px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.date-filter button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.date-filter button:hover {
+    background-color: #0056b3;
+}
+
+/* Log Tablosu */
+.log-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}

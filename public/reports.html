@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raporlar</title>
+    <link rel="stylesheet" href="stylereports.css"> <!-- CSS dosyamız -->
+</head>
+<body>
+
+    <div class="container">
+        <h2>📄 Raporlar</h2>
+
+        <!-- Tarih Aralığı Seçme -->
+        <div class="date-filter">
+            <label for="startDate">Başlangıç Tarihi:</label>
+            <input type="date" id="startDate">
+
+            <label for="endDate">Bitiş Tarihi:</label>
+            <input type="date" id="endDate">
+
+            <button onclick="filterLogs()">Filtrele</button>
+        </div>
+
+        <!-- Logları Görüntüleme Alanı -->
+        <div class="log-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tarih</th>
+                        <th>İçerik</th>
+                    </tr>
+                </thead>
+                <tbody id="logTable">
+                    <!-- Loglar buraya eklenecek -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        async function filterLogs() {
+            const startDate = document.getElementById("startDate").value;
+            const endDate = document.getElementById("endDate").value;
+
+            if (!startDate || !endDate) {
+                alert("Lütfen başlangıç ve bitiş tarihi seçin!");
+                return;
+            }
+
+            try {
+                const response = await fetch(`/api/logs?startDate=${startDate}&endDate=${endDate}`);
+                
+                if (!response.ok) {
+                    throw new Error(`Sunucu Hatası: ${response.status}`);
+                }
+
+                const logs = await response.json();
+                console.log("Gelen Loglar:", logs); // Konsolda logları gör
+
+                // Eğer log yoksa kullanıcıya bildir
+                if (logs.length === 0) {
+                    document.getElementById("logTable").innerHTML = "<tr><td colspan='2'>Bu tarihler arasında kayıt bulunamadı.</td></tr>";
+                    return;
+                }
+
+                // Tabloyu temizle
+                const logTable = document.getElementById("logTable");
+                logTable.innerHTML = "";
+
+                // Logları ekrana yazdır
+                logs.forEach(log => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `<td>${new Date(log.date).toLocaleString("tr-TR")}</td><td>${log.content}</td>`;
+                    logTable.appendChild(row);
+                });
+
+            } catch (error) {
+                console.error("Logları çekerken hata oluştu:", error);
+                alert("Logları çekerken hata oluştu! Detaylar için konsolu kontrol edin.");
+            }
+        }
+        
+    </script>
+
+</body>
+</html>

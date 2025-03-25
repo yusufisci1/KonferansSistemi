@@ -1,0 +1,2 @@
+[24.03.2025 22:17:10] 🚀 Server 3000 portunda çalışıyor!
+[24.03.2025 22:17:10] ✅ MongoDB bağlantısı başarılı!

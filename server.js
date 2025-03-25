@@ -11,19 +11,17 @@ const fs = require("fs");
 const path = require("path");
 // 📌 Log dosyasının yolu
 const logFilePath = path.join(__dirname, "logs", "logs.txt");
-
+// 📌 Log dosyasının tam yolu
+const LOG_FILE_PATH = path.join(__dirname, "logs", "logs.txt");
 // 📌 Eğer logs klasörü yoksa oluştur
 if (!fs.existsSync(path.join(__dirname, "logs"))) {
     fs.mkdirSync(path.join(__dirname, "logs"));
 }
-
 // 📌 Orijinal console.log fonksiyonunu sakla
 const originalConsoleLog = console.log;
-
 // 📌 Yeni console.log fonksiyonu (Logları hem terminale hem dosyaya kaydeder)
 console.log = function (message) {
     const logMessage = `[${new Date().toLocaleString()}] ${message}\n`;
-
     // Terminale yazdır
     originalConsoleLog(logMessage);
 
@@ -43,9 +41,7 @@ const io = socketIo(server, {
 
 app.use(express.json());
 app.use(express.static("public"));
-
 app.use("/api/users", userRoutes);
-
 app.get("/", (req, res) => {
   res.send("Konferans Sistemi API Çalışıyor!");
 });
@@ -260,6 +256,56 @@ io.on("connection", (socket) => {
     }
 });
 
+// 📌 LOG KAYITLARINI TARİH ARALIĞINA GÖRE GETİRME ENDPOINT'İ
+app.get("/api/logs", (req, res) => {
+  const { startDate, endDate } = req.query;
+
+  if (!startDate || !endDate) {
+      return res.status(400).json({ message: "Lütfen başlangıç ve bitiş tarihi seçin." });
+  }
+
+ // console.log(`📌 API isteği alındı! Tarih aralığı: ${startDate} - ${endDate}`);
+
+  // 📌 Eğer tarih aralığı aynıysa, tüm günkü kayıtları alacak şekilde saatleri ayarla
+  const start = new Date(startDate);
+  start.setHours(0, 0, 0, 0); // Günün başı: 00:00:00
+
+  const end = new Date(endDate);
+  end.setHours(23, 59, 59, 999); // Günün sonu: 23:59:59
+
+  // 📌 logs.txt dosyasını oku
+  fs.readFile(LOG_FILE_PATH, "utf8", (err, data) => {
+      if (err) {
+          console.error("❌ Log dosyası okunamadı:", err);
+          return res.status(500).json({ message: "Log dosyası okunamadı." });
+      }
+
+      // 📌 Logları satır satır işle
+      const logs = data.split("\n").filter(line => line.trim() !== "").map(line => {
+      //    console.log(`🔍 İşlenen Log Satırı: ${line}`);
+
+          // 📌 "[22.03.2025 21:53:24] berenisci söz istedi." formatını ayrıştır
+          const parts = line.match(/\[(\d{2})\.(\d{2})\.(\d{4}) (\d{2}):(\d{2}):(\d{2})\] (.+)/);
+          if (!parts) return null;
+
+          // 📌 Tarih formatını "YYYY-MM-DDTHH:MM:SS" şekline çevir
+          const formattedDate = `${parts[3]}-${parts[2]}-${parts[1]}T${parts[4]}:${parts[5]}:${parts[6]}`;
+
+          return { date: new Date(formattedDate), content: parts[7] };
+      }).filter(log => log !== null); // Hatalı satırları temizle
+
+    //  console.log("📌 İşlenen Loglar:", logs);
+
+      // 📌 Seçilen tarih aralığına göre filtrele
+      const filteredLogs = logs.filter(log => {
+          return log.date >= start && log.date <= end;
+      });
+
+    //  console.log("✅ Filtrelenmiş Loglar:", filteredLogs);
+
+      res.json(filteredLogs);
+  });
+});
 
 
 });

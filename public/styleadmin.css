@@ -128,3 +128,58 @@ button:hover {
 .settings-button:hover {
     background-color: #0056b3;
 }
+
+/* 📌 Açılır Menü Kapsayıcısı */
+.dropdown {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+}
+
+/* 📌 Ayarlar Butonu */
+.settings-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 150px;
+    text-align: left;
+}
+
+/* 📌 Açılır Menü (Varsayılan Olarak Gizli) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px; /* Butonun altına hizala */
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+}
+
+/* 📌 Açılır Menü İçindeki Linkler */
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+/* 📌 Link Üzerine Gelince */
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+/* 📌 Ayarlar Butonunun Üzerine Gelindiğinde Menüyü Aç */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

@@ -5,3 +5,11 @@
 [25.03.2025 07:11:33] berenisci söz istedi.
 [25.03.2025 07:11:37] berenisci söz hakkı onaylandı.
 [25.03.2025 07:11:43] Kullanıcı ayrıldı: berenisci
+[25.03.2025 11:38:19] 🚀 Server 3000 portunda çalışıyor!
+[25.03.2025 11:38:19] ✅ MongoDB bağlantısı başarılı!
+[25.03.2025 11:48:06] Toplantı başladı!
+[25.03.2025 11:48:14] Kullanıcı bağlandı: berenisci
+[25.03.2025 11:48:16] berenisci söz istedi.
+[25.03.2025 11:48:21] berenisci söz hakkı onaylandı.
+[25.03.2025 11:48:29] Toplantı sona erdi!
+[25.03.2025 11:48:33] Kullanıcı ayrıldı: berenisci

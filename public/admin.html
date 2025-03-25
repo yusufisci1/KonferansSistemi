@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <div class="button-container">
-        <button class="settings-button" onclick="goToSettings()">Kullanıcı Ekle</button>
-        <button class="report-button" onclick="goToReports()">Reports</button>
+     <!-- 📌 Sağ Üst Köşede Açılır Ayarlar Menüsü -->
+     <div class="dropdown">
+        <button class="settings-button" onclick="toggleDropdown()">⚙ Ayarlar</button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="settings.html">👤 Kullanıcı Ekle</a>
+            <a href="reports.html">📄 Raporlar</a>
+        </div>
+    </div>
     </div> <title>Başkan Paneli</title>
     <!-- CSS dosyasını bağladık -->
     <link href="styleadmin.css" rel="stylesheet">
@@ -61,6 +67,25 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
         const socket = io();
+
+        function toggleDropdown() {
+            document.getElementById("dropdownMenu").classList.toggle("show");
+        }
+
+        // 📌 Sayfanın başka bir yerine tıklanınca menüyü kapatma
+        window.onclick = function(event) {
+            if (!event.target.matches('.settings-button')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains("show")) {
+                        openDropdown.classList.remove("show");
+                    }
+                }
+            }
+        }
+
+
 
         function goToSettings() {
             window.location.href = "settings.html"; // Ayarlar sayfasına yönlendir

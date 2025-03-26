@@ -8,8 +8,9 @@
      <div class="dropdown">
         <button class="settings-button" onclick="toggleDropdown()">⚙ Ayarlar</button>
         <div class="dropdown-menu" id="dropdownMenu">
-            <a href="settings.html">👤 Kullanıcı Ekle</a>
-            <a href="reports.html">📄 Raporlar</a>
+            <a href="settings.html"> Kullanıcı Ekle</a>
+            <a href="reports.html"> Raporlar</a>
+            <a href="lists.html"> Oylama ve Yoklamaları listele</a>
         </div>
     </div>
     </div> <title>Başkan Paneli</title>
@@ -143,6 +144,10 @@
 
         socket.on("attendanceEnded", () => {
             document.getElementById("attendanceStatus").innerText = "Yoklama bitti!";
+        });
+
+        socket.on("votingEnded", () => {
+            document.getElementById("votingStatus").innerText = "Oylama bitti!";
         });
     
         socket.on("votingStarted", () => {

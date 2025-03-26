@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Listesi</title>
+    <link rel="stylesheet" href="stylelists.css"> <!-- CSS dosyasını bağladık -->
+</head>
+<body>
+
+    <div class="container">
+        <h2>📄 PDF Raporları</h2>
+
+        <!-- 📌 PDF Dosyaları Listesi -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Tarih</th>
+                    <th>Dosya Adı</th>
+                    <th>İşlem</th>
+                </tr>
+            </thead>
+            <tbody id="pdfTable">
+                <!-- PDF dosyaları buraya eklenecek -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // 📌 Sunucudan PDF listesini çek
+        async function fetchPDFFiles() {
+            const response = await fetch("/api/list-pdfs");
+            const files = await response.json();
+            const tableBody = document.getElementById("pdfTable");
+
+            tableBody.innerHTML = ""; // Önce tabloyu temizle
+
+            // 📌 Dosyaları tarih sırasına göre sırala
+            files.sort((a, b) => {
+                return new Date(b.date) - new Date(a.date); // Yeni tarih üste gelsin
+            });
+
+            files.forEach(file => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${new Date(file.date).toLocaleString("tr-TR")}</td>
+                    <td>${file.name}</td>
+                    <td><a href="/reports/${file.name}" target="_blank">📄 Görüntüle</a></td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // 📌 Sayfa Yüklenince PDF Dosyalarını Listele
+        fetchPDFFiles();
+    </script>
+
+</body>
+</html>

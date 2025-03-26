@@ -1,0 +1,37 @@
+/* 📌 Genel Konteyner */
+.container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+/* 📌 Tablo Stili */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* 📌 Görüntüle Butonu */
+a {
+    text-decoration: none;
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #218838;
+}

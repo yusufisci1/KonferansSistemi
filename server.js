@@ -13,6 +13,8 @@ const path = require("path");
 const logFilePath = path.join(__dirname, "logs", "logs.txt");
 // 📌 Log dosyasının tam yolu
 const LOG_FILE_PATH = path.join(__dirname, "logs", "logs.txt");
+const reportsDir = path.join(__dirname, "public", "reports"); // 📌 PDF dosyalarının olduğu klasör
+
 // 📌 Eğer logs klasörü yoksa oluştur
 if (!fs.existsSync(path.join(__dirname, "logs"))) {
     fs.mkdirSync(path.join(__dirname, "logs"));
@@ -208,6 +210,7 @@ io.on("connection", (socket) => {
     if (username) {
         console.log(`Kullanıcı ayrıldı: ${username}`);
         delete connectedUsers[socket.id]; // Kullanıcıyı listeden kaldır
+  
     } else {
      //   console.log(`Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ${socket.id})`);
     }
@@ -306,9 +309,27 @@ app.get("/api/logs", (req, res) => {
       res.json(filteredLogs);
   });
 });
-
-
 });
+
+// 📌 Mevcut PDF Dosyalarını Tarih Sırasına Göre Listeleme Endpoint'i
+app.get("/api/list-pdfs", (req, res) => {
+  fs.readdir(reportsDir, (err, files) => {
+      if (err) {
+          return res.status(500).json({ message: "PDF dosyaları okunamadı." });
+      }
+
+      const pdfFiles = files
+          .filter(file => file.endsWith(".pdf"))
+          .map(file => ({
+              name: file,
+              date: fs.statSync(path.join(reportsDir, file)).mtime // Dosyanın oluşturulma tarihi
+          }))
+          .sort((a, b) => b.date - a.date); // Yeni tarih en üste gelsin
+
+      res.json(pdfFiles);
+  });
+});
+
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => console.log(`🚀 Server ${PORT} portunda çalışıyor!`));

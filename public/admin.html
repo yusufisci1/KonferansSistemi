@@ -20,28 +20,15 @@
 </head>
 <body>
     <h1>Başkan Paneli</h1>
-    
-    <div>
-        <div style="display: inline-block; margin-left: 20px;"> 
-            <button onclick="startMeeting()">Toplantıyı Başlat</button>
-            <button onclick="endMeeting()">Toplantıyı Bitir</button> <!-- Yeni buton -->
-            <p id="meetingStatus">Toplantı başlamadı.</p>
-        </div>
-        <div style="display: inline-block; margin-left: 20px;">
-            <button onclick="startVoting()">Oylamayı Başlat</button>
-            <button onclick="endVoting()">Oylamayı Bitir</button> <!-- Yeni buton -->
-            <p id="votingStatus">Oylama başlamadı.</p>
-        </div>
-        <div style="display: inline-block; margin-left: 20px;">
-            <button onclick="startAttendance()">Yoklamayı Başlat</button>
-            <button onclick="endAttendance()">Yoklamayı Bitir</button> <!-- Yeni buton -->
-            <p id="attendanceStatus">Yoklama başlamadı.</p>
-        </div>
-    </div>
 
     <div class="container">
         <!-- Söz İstekleri -->
         <div class="section">
+            <div style="display: inline-block; margin-left: 20px;"> 
+                <button onclick="startMeeting()">Toplantıyı Başlat</button>
+                <button onclick="endMeeting()">Toplantıyı Bitir</button> <!-- Yeni buton -->
+                <p id="meetingStatus">Toplantı başlamadı.</p>
+            </div>
             <h2>Söz İstekleri</h2>
             <div id="requests" class="request">
                 <!-- Dinamik olarak buraya veriler eklenecek -->
@@ -50,18 +37,37 @@
 
         <!-- Oylama Sonuçları -->
         <div class="section">
+            <div style="display: inline-block; margin-left: 20px;">
+                <button onclick="startVoting()">Oylamayı Başlat</button>
+                <button onclick="endVoting()">Oylamayı Bitir</button> <!-- Yeni buton -->
+                <p id="votingStatus">Oylama başlamadı.</p>
+            </div>
             <h2>Oylama Sonuçları</h2>
             <div id="votes" class="vote">
                 <!-- Dinamik olarak buraya veriler eklenecek -->
+            </div>
+
+            <div id="voteCounts" style="margin-top: 20px; display: flex; gap: 20px; justify-content: center;">
+                <p>Kabul: <span id="acceptCount">0</span></p>
+                <p>Red: <span id="rejectCount">0</span></p>
             </div>
         </div>
 
         <!-- Yoklamaya Katılanlar -->
         <div class="section">
+            <div style="display: inline-block; margin-left: 20px;">
+                <button onclick="startAttendance()">Yoklamayı Başlat</button>
+                <button onclick="endAttendance()">Yoklamayı Bitir</button> <!-- Yeni buton -->
+                <p id="attendanceStatus">Yoklama başlamadı.</p>
+            </div>
             <h2>Yoklamaya Katılanlar</h2>
             <div id="attendees" class="attendance">
                 <!-- Dinamik olarak buraya veriler eklenecek -->
             </div>
+            <div id="attendanceCounts" style="margin-top: 20px;">
+                <p>Katılımcı Sayısı: <span id="attendanceCount">0</span></p>
+            </div>
+
         </div>
     </div>
 
@@ -211,7 +217,16 @@
             attendeeDiv.appendChild(item);
         });
 
-       
+        socket.on("updateVoteCounts", ({ accept, reject }) => {
+            document.getElementById("acceptCount").innerText = accept;
+            document.getElementById("rejectCount").innerText = reject;
+        });
+
+        socket.on("updateAttendanceCount", (count) => {
+            document.getElementById("attendanceCount").innerText = count;
+        });
+
+
     </script>
 </body>
 </html>

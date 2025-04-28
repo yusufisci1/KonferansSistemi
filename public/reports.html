@@ -36,6 +36,8 @@
                 </tbody>
             </table>
         </div>
+         <!-- 📌 Çıktı Al Butonu -->
+         <button onclick="printReport()">🖨 Çıktı Al</button>
     </div>
 
     <script>
@@ -81,6 +83,16 @@
             }
         }
         
+           // 📌 Çıktı Alma Fonksiyonu
+        function printReport() {
+            const content = document.querySelector(".container").innerHTML;
+            const printWindow = window.open("", "", "width=800,height=600");
+            printWindow.document.write(`<html><head><title>Rapor Çıktısı</title></head><body>`);
+            printWindow.document.write(content);
+            printWindow.document.write(`</body></html>`);
+            printWindow.document.close();
+            printWindow.print();
+        }
     </script>
 
 </body>

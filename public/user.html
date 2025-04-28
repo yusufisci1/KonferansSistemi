@@ -24,6 +24,7 @@
             <button onclick="markAttendance()">Yoklamaya Katıl</button>
         </div>
 
+        <div id="requestMessage" style="display: none; font-size: 18px; color: green; text-align: left; margin-top: 10px;"></div>
         <div id="speakMessage" style="display: none; font-size: 18px; color: green; text-align: left; margin-top: 10px;"></div>
     </div>
 
@@ -42,6 +43,7 @@
     socket.on("welcomeMessage", (message) => {
         console.log(message);
     });
+    
 
         // Söz isteme fonksiyonu
         function requestToSpeak() {
@@ -50,6 +52,14 @@
                 return;
             }
             socket.emit("requestToSpeak", username);
+            const messageDiv = document.getElementById("requestMessage");
+            messageDiv.style.display = "block";  // Mesajı görünür yap
+            messageDiv.innerHTML = `Söz Talebiniz Alındı...`; 
+
+             // 5 saniye sonra yazıyı kaldır
+        setTimeout(() => {
+            messageDiv.style.display = "none"; 
+        }, 2000);
         }
 
         // Oylama fonksiyonu
@@ -102,11 +112,13 @@
             document.getElementById("votingStatus").innerText = "Oylama bitti!";
         });
 
+  
         socket.on("requestApproved", (approvedUsername) => {
           if (approvedUsername.username===username){
             const speakMessageDiv = document.getElementById("speakMessage");
             speakMessageDiv.style.display = "block";  // Mesajı görünür yap
-            speakMessageDiv.innerHTML = `Söz Sizde Konuşabilirsiniz...`;  // Mesajı kullanıcıya göster
+            speakMessageDiv.innerHTML = `Söz Sizde Konuşabilirsiniz...`; 
+         // Mesajı kullanıcıya göster
 
             // 5 saniye sonra mesajı gizle
             setTimeout(() => {

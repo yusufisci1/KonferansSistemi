@@ -57,6 +57,9 @@ let hasJoinedAttendance = {};
 let hasJoinedMeeting = {};
 let hasVoted = {};
 
+let acceptCount = 0; // Kabul sayısı
+let rejectCount = 0; // Red sayısı
+
 io.on("connection", (socket) => {
  
  // console.log("Bir kullanıcı bağlandı.");
@@ -119,6 +122,9 @@ io.on("connection", (socket) => {
         console.log(`Yoklama listesi PDF olarak kaydedildi: ${filePath}`);
     }
 
+     // 📌 Başkan ekranında yoklama sayısını sıfırla!
+     io.emit("updateAttendanceCount", 0);
+     
     // Listeyi temizle
     hasJoinedAttendance = {};
     io.emit("attendanceEnded");
@@ -155,10 +161,17 @@ io.on("connection", (socket) => {
         console.log(`Oylama sonuçları PDF olarak kaydedildi: ${filePath}`);
     }
 
+     // ✅ Kabul ve Red sayılarını sıfırla
+     acceptCount = 0;
+     rejectCount = 0;
+
+
     // Listeyi temizle
     hasVoted = {};
     io.emit("votingEnded");
     io.emit("updatedVotes", []);
+    io.emit("updateVoteCounts", { accept: 0, reject: 0 }); // Başkan ekranında da sıfırlansın
+
    // Oylama durumunu sıfırla
     isVotingStarted = false;
 });
@@ -170,6 +183,7 @@ io.on("connection", (socket) => {
     hasRequestedToSpeak[username] = true;
     console.log(`${username} söz istedi.`);
     io.emit("newRequest", { username });
+
   });
 
   socket.on("attendance", (username) => {
@@ -179,6 +193,12 @@ io.on("connection", (socket) => {
     hasJoinedAttendance[username] = true;
     console.log(`${username} yoklamaya katıldı.`);
     io.emit("attendanceMarked", { username });
+
+// 📌 Başkan için: Toplam yoklama sayısını gönder
+const attendanceCount = Object.keys(hasJoinedAttendance).length;
+io.emit("updateAttendanceCount", attendanceCount);
+
+
   });
 
   socket.on("joinMeeting", (username) => {
@@ -196,13 +216,24 @@ io.on("connection", (socket) => {
     
     hasVoted[username] = choice;
     console.log(`${username} oylamada ${choice} dedi.`);
+
+ // Kabul / Red sayılarını güncelle
+ if (choice === " Kabul") {
+  acceptCount++;
+} else if (choice === "Red") {
+  rejectCount++;
+}
+
+
     io.emit("voteResult", { username, choice });
+    io.emit("updateVoteCounts", { accept: acceptCount, reject: rejectCount }); // Oylama sonuçları sadece başkan tarafından dinlenecek
   });
 
   socket.on("approveRequest", (username) => {
     console.log(`${username} söz hakkı onaylandı.`);
     hasRequestedToSpeak[username] = false;
     io.emit("requestApproved", { username });
+    
   });
 
   socket.on("disconnect", () => {
@@ -211,6 +242,7 @@ io.on("connection", (socket) => {
         console.log(`Kullanıcı ayrıldı: ${username}`);
         delete connectedUsers[socket.id]; // Kullanıcıyı listeden kaldır
   
+        
     } else {
      //   console.log(`Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ${socket.id})`);
     }

@@ -1,3 +1,4 @@
+/* 📌 Genel Sayfa Ayarları */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f6f9;
@@ -6,73 +7,75 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start;
+    min-height: 100vh;
 }
 
+/* 📌 Başlıklar */
 h1, h2 {
     color: #333;
     text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
 }
 
 h1 {
     font-size: 36px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 h2 {
-    font-size: 28px;
-    margin-top: 30px;
+    font-size: 24px;
     color: #2c3e50;
 }
 
-p {
-    font-size: 18px;
-    color: #7f8c8d;
+/* 📌 İçerik Konteyneri (Tüm Sayfayı Kapsar) */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 30px;
 }
 
+/* 📌 Bölüm Tasarımı */
+.section {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.section:hover {
+    transform: scale(1.02);
+}
+
+.section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* 📌 Buton Stilleri */
 button {
     background-color: #3498db;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 16px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #2980b9;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolonlu grid yapısı */
-    gap: 20px;
-    width: 80%;
-    margin-top: 30px;
-    max-width: 1000px;
-}
-
-.section {
-    padding: 10px;
-    text-align: center;
-    background-color: #ecf0f1;
-    border-radius: 5px;
-    max-height: 400px; /* Maksimum yükseklik belirliyoruz */
-    overflow-y: auto; /* İçerik fazla olursa kaydırma çubuğu ekler */
-}
-
-.section h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
+/* 📌 Oylama, Söz İsteme ve Yoklama Butonları */
 .request, .vote, .attendance {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -84,44 +87,35 @@ button:hover {
 .request button, .vote button, .attendance button {
     background-color: #2ecc71;
     font-size: 14px;
-    padding: 5px 10px;
-    border-radius: 3px;
+    padding: 8px 12px;
 }
 
 .request button:hover, .vote button:hover, .attendance button:hover {
     background-color: #27ae60;
 }
 
+/* 📌 Durum Metinleri */
 #meetingStatus, #attendanceStatus, #votingStatus {
     font-weight: bold;
-    font-size: 20px;
-    color: #16a085;
+    font-size: 14px;
 }
 
-#meetingStatus {
-    color: #e67e22;
-}
+#meetingStatus { color: #e62222; }
+#attendanceStatus { color: #e62222; }
+#votingStatus { color: #e62222; }
 
-#attendanceStatus {
-    color: #8e44ad;
-}
-
-#votingStatus {
-    color: #2980b9;
-}
-
- /* Ayarlar Butonu */
- .settings-button {
-    position: absolute;
+/* 📌 Ayarlar Butonu */
+.settings-button {
+    position: fixed;
     top: 10px;
     right: 10px;
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 8px 12px;
-    font-size: 14px;
+    padding: 8px 14px;
+    font-size: 16px;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 5px;
     transition: 0.3s;
 }
 
@@ -129,57 +123,87 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* 📌 Açılır Menü Kapsayıcısı */
+/* 📌 Açılır Menü */
 .dropdown {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
-    display: inline-block;
 }
 
-/* 📌 Ayarlar Butonu */
-.settings-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 12px 16px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-    width: 150px;
-    text-align: left;
-}
-
-/* 📌 Açılır Menü (Varsayılan Olarak Gizli) */
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 40px; /* Butonun altına hizala */
+    top: 40px;
     right: 0;
     background-color: white;
     min-width: 160px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    z-index: 1;
-    transition: 0.3s ease-in-out;
+    z-index: 10;
 }
 
-/* 📌 Açılır Menü İçindeki Linkler */
 .dropdown-menu a {
     color: black;
-    padding: 12px 16px;
+    padding: 10px 14px;
     text-decoration: none;
     display: block;
+    font-size: 14px;
     transition: 0.3s;
 }
 
-/* 📌 Link Üzerine Gelince */
 .dropdown-menu a:hover {
     background-color: #f1f1f1;
 }
 
-/* 📌 Ayarlar Butonunun Üzerine Gelindiğinde Menüyü Aç */
+/* 📌 Menü Açma */
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+/* 📌 Responsive Tasarım */
+@media (max-width: 768px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 20px; }
+    
+    .container {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .settings-button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 24px; }
+    h2 { font-size: 18px; }
+    
+    .container {
+        width: 100%;
+    }
+
+    .section {
+        padding: 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .settings-button {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
 }

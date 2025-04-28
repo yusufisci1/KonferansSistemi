@@ -538,3 +538,88 @@
 [28.04.2025 10:24:09] Kullanıcı ayrıldı: erenisci
 [28.04.2025 10:24:09] Kullanıcı ayrıldı: berenisci
 [28.04.2025 10:24:10] Kullanıcı ayrıldı: gülhanisci
+[28.04.2025 11:35:31] Kullanıcı bağlandı: berenisci
+[28.04.2025 11:35:34] Kullanıcı bağlandı: gülhanisci
+[28.04.2025 11:35:37] Toplantı başladı!
+[28.04.2025 11:36:22] berenisci söz istedi.
+[28.04.2025 11:36:24] gülhanisci söz istedi.
+[28.04.2025 11:36:37] gülhanisci söz hakkı onaylandı.
+[28.04.2025 11:36:43] gülhanisci söz istedi.
+[28.04.2025 11:36:52] gülhanisci söz hakkı onaylandı.
+[28.04.2025 11:36:58] berenisci söz hakkı onaylandı.
+[28.04.2025 11:37:08] Oylama başladı!
+[28.04.2025 11:37:12] berenisci oylamada  Kabul dedi.
+[28.04.2025 11:37:16] gülhanisci oylamada Red dedi.
+[28.04.2025 11:37:26] Oylama sona erdi! PDF oluşturuluyor...
+[28.04.2025 11:37:26] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1745829446073.pdf
+[28.04.2025 11:37:29] Yoklama başladı!
+[28.04.2025 11:37:31] berenisci yoklamaya katıldı.
+[28.04.2025 11:37:34] gülhanisci yoklamaya katıldı.
+[28.04.2025 11:37:38] Yoklama sona erdi! PDF oluşturuluyor...
+[28.04.2025 11:37:38] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1745829458217.pdf
+[28.04.2025 11:37:39] gülhanisci söz istedi.
+[28.04.2025 11:37:41] berenisci söz istedi.
+[28.04.2025 11:38:33] Toplantı başladı!
+[28.04.2025 11:38:34] Toplantı sona erdi!
+[28.04.2025 11:38:36] Toplantı başladı!
+[28.04.2025 11:38:37] berenisci söz istedi.
+[28.04.2025 11:38:38] gülhanisci söz istedi.
+[28.04.2025 11:39:19] Toplantı sona erdi!
+[28.04.2025 11:40:15] Toplantı başladı!
+[28.04.2025 11:40:16] gülhanisci söz istedi.
+[28.04.2025 11:40:21] berenisci söz istedi.
+[28.04.2025 11:40:30] berenisci söz hakkı onaylandı.
+[28.04.2025 11:40:36] gülhanisci söz hakkı onaylandı.
+[28.04.2025 11:40:50] gülhanisci söz istedi.
+[28.04.2025 11:40:53] berenisci söz istedi.
+[28.04.2025 11:40:58] gülhanisci söz hakkı onaylandı.
+[28.04.2025 11:41:02] berenisci söz hakkı onaylandı.
+[28.04.2025 11:41:10] Toplantı sona erdi!
+[28.04.2025 11:41:13] Oylama başladı!
+[28.04.2025 11:41:16] berenisci oylamada  Kabul dedi.
+[28.04.2025 11:41:18] gülhanisci oylamada Red dedi.
+[28.04.2025 11:41:25] Oylama sona erdi! PDF oluşturuluyor...
+[28.04.2025 11:41:25] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1745829685082.pdf
+[28.04.2025 11:41:56] Oylama başladı!
+[28.04.2025 11:41:58] berenisci oylamada  Kabul dedi.
+[28.04.2025 11:42:00] gülhanisci oylamada  Kabul dedi.
+[28.04.2025 11:42:15] Oylama sona erdi! PDF oluşturuluyor...
+[28.04.2025 11:42:15] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1745829735106.pdf
+[28.04.2025 11:42:33] Kullanıcı ayrıldı: berenisci
+[28.04.2025 11:42:34] Kullanıcı ayrıldı: gülhanisci
+[28.04.2025 12:10:53] 🚀 Server 3000 portunda çalışıyor!
+[28.04.2025 12:10:53] ✅ MongoDB bağlantısı başarılı!
+[28.04.2025 12:12:06] Kullanıcı bağlandı: gülhanisci
+[28.04.2025 12:12:09] Oylama başladı!
+[28.04.2025 12:12:14] gülhanisci oylamada Kabul dedi.
+[28.04.2025 12:12:25] Kullanıcı bağlandı: berenisci
+[28.04.2025 12:12:28] berenisci oylamada Red dedi.
+[28.04.2025 12:12:31] Kullanıcı ayrıldı: berenisci
+[28.04.2025 12:12:31] Kullanıcı ayrıldı: gülhanisci
+[28.04.2025 12:13:52] Kullanıcı bağlandı: berenisci
+[28.04.2025 12:13:53] Oylama başladı!
+[28.04.2025 12:13:54] Oylama sona erdi! PDF oluşturuluyor...
+[28.04.2025 12:13:54] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1745831634328.pdf
+[28.04.2025 12:13:55] Oylama başladı!
+[28.04.2025 12:13:57] berenisci oylamada  Kabul dedi.
+[28.04.2025 12:14:04] Kullanıcı ayrıldı: berenisci
+[28.04.2025 12:15:19] Oylama sona erdi! PDF oluşturuluyor...
+[28.04.2025 12:15:19] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1745831719766.pdf
+[28.04.2025 12:15:30] Kullanıcı bağlandı: berenisci
+[28.04.2025 12:15:34] Kullanıcı bağlandı: gülhanisci
+[28.04.2025 12:15:36] Oylama başladı!
+[28.04.2025 12:15:40] gülhanisci oylamada  Kabul dedi.
+[28.04.2025 12:15:44] Oylama sona erdi! PDF oluşturuluyor...
+[28.04.2025 12:15:44] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1745831744724.pdf
+[28.04.2025 12:15:46] Yoklama başladı!
+[28.04.2025 12:15:51] gülhanisci yoklamaya katıldı.
+[28.04.2025 12:16:02] berenisci yoklamaya katıldı.
+[28.04.2025 12:16:10] Yoklama sona erdi! PDF oluşturuluyor...
+[28.04.2025 12:16:10] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1745831770306.pdf
+[28.04.2025 12:16:12] Oylama başladı!
+[28.04.2025 12:16:15] gülhanisci oylamada Red dedi.
+[28.04.2025 12:16:19] berenisci oylamada Red dedi.
+[28.04.2025 12:16:24] Oylama sona erdi! PDF oluşturuluyor...
+[28.04.2025 12:16:24] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1745831784157.pdf
+[28.04.2025 12:16:26] Kullanıcı ayrıldı: gülhanisci
+[28.04.2025 12:16:27] Kullanıcı ayrıldı: berenisci

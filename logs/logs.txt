@@ -623,3 +623,23 @@
 [28.04.2025 12:16:24] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1745831784157.pdf
 [28.04.2025 12:16:26] Kullanıcı ayrıldı: gülhanisci
 [28.04.2025 12:16:27] Kullanıcı ayrıldı: berenisci
+[28.04.2025 14:56:41] 🚀 Server 3000 portunda çalışıyor!
+[28.04.2025 14:56:41] ✅ MongoDB bağlantısı başarılı!
+[28.04.2025 14:57:09] Kullanıcı bağlandı: berenisci
+[28.04.2025 14:57:53] Toplantı başladı!
+[28.04.2025 14:57:59] Oylama başladı!
+[28.04.2025 14:58:06] berenisci oylamada  Kabul dedi.
+[28.04.2025 14:58:29] Kullanıcı bağlandı: gülhanisci
+[28.04.2025 14:58:31] gülhanisci oylamada Red dedi.
+[28.04.2025 14:58:36] Oylama sona erdi! PDF oluşturuluyor...
+[28.04.2025 14:58:36] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1745841516631.pdf
+[28.04.2025 14:58:40] Yoklama başladı!
+[28.04.2025 14:58:53] berenisci yoklamaya katıldı.
+[28.04.2025 14:59:32] gülhanisci yoklamaya katıldı.
+[28.04.2025 14:59:57] Yoklama sona erdi! PDF oluşturuluyor...
+[28.04.2025 14:59:57] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1745841597090.pdf
+[28.04.2025 15:00:03] Kullanıcı ayrıldı: berenisci
+[28.04.2025 15:00:03] Kullanıcı ayrıldı: gülhanisci
+[28.04.2025 15:02:51] Kullanıcı bağlandı: gülhanisci
+[28.04.2025 15:02:54] Toplantı sona erdi!
+[28.04.2025 15:02:55] Kullanıcı ayrıldı: gülhanisci

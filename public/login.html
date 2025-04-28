@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giriş Yap</title>
     <link rel="stylesheet" href="stylelogin.css"> <!-- CSS dosyasına bağlantı -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -37,7 +38,13 @@
                     window.location.href = "user.html"; // Kullanıcı ekranı
                 }
             } else {
-                alert(data.message);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Giriş Başarısız!',
+                    text: data.message,
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'Tamam'
+                });
             }
         }
     </script>

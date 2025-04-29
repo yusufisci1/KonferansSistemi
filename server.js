@@ -133,47 +133,49 @@ io.on("connection", (socket) => {
     isAttendanceStarted = false;
 });
 
-  socket.on("startVoting", () => {
-    console.log("Oylama başladı!");
-    io.emit("votingStarted");
-    isVotingStarted = true;
-  });
+socket.on("startVoting", () => {
+  console.log("Oylama başladı!");
+  isVotingStarted = true;
 
-  socket.on("endVoting", () => {
-    console.log("Oylama sona erdi! PDF oluşturuluyor...");
+  // Sayaçları sıfırla
+  acceptCount = 0;
+  rejectCount = 0;
+  hasVoted = {}; // Oy kullananları temizle
 
-    if (Object.keys(hasVoted).length > 0) {
-        const doc = new PDFDocument();
-        const now = new Date();
-        const formattedDate = now.toLocaleString("tr-TR"); // Türkçe tarih formatı
-        const filePath = `public/reports/oylama_${Date.now()}.pdf`;
+  io.emit("votingStarted");
+  io.emit("updateVoteCounts", { accept: 0, reject: 0 }); // Başkan sayacı sıfırdan başlasın
+});
 
-        doc.pipe(fs.createWriteStream(filePath));
-        doc.fontSize(20).text("Oylama Sonuçları", { align: "center" });
-        doc.fontSize(12).text(`Tarih: ${formattedDate}`, { align: "center" }); // Zamanı ekle
-        doc.moveDown();
+socket.on("endVoting", () => {
+  console.log("Oylama sona erdi! PDF oluşturuluyor...");
 
-        Object.entries(hasVoted).forEach(([username, choice], index) => {
-            doc.fontSize(14).text(`${index + 1}. ${username}: ${choice}`);
-        });
+  if (Object.keys(hasVoted).length > 0) {
+      const doc = new PDFDocument();
+      const now = new Date();
+      const formattedDate = now.toLocaleString("tr-TR");
+      const filePath = `public/reports/oylama_${Date.now()}.pdf`;
 
-        doc.end();
-        console.log(`Oylama sonuçları PDF olarak kaydedildi: ${filePath}`);
-    }
+      doc.pipe(fs.createWriteStream(filePath));
+      doc.fontSize(20).text("Oylama Sonuçları", { align: "center" });
+      doc.fontSize(12).text(`Tarih: ${formattedDate}`, { align: "center" });
+      doc.moveDown();
 
-     // ✅ Kabul ve Red sayılarını sıfırla
-     acceptCount = 0;
-     rejectCount = 0;
+      Object.entries(hasVoted).forEach(([username, choice], index) => {
+          doc.fontSize(14).text(`${index + 1}. ${username}: ${choice}`);
+      });
 
+      doc.end();
+      console.log(`Oylama sonuçları PDF olarak kaydedildi: ${filePath}`);
+  }
 
-    // Listeyi temizle
-    hasVoted = {};
-    io.emit("votingEnded");
-    io.emit("updatedVotes", []);
-    io.emit("updateVoteCounts", { accept: 0, reject: 0 }); // Başkan ekranında da sıfırlansın
+  // Oy bilgilerini sıfırla
+  acceptCount = 0;
+  rejectCount = 0;
+  hasVoted = {};
+  isVotingStarted = false;
 
-   // Oylama durumunu sıfırla
-    isVotingStarted = false;
+  io.emit("votingEnded");
+  io.emit("updateVoteCounts", { accept: 0, reject: 0 }); // Sayaçları sıfırla
 });
 
   socket.on("requestToSpeak", (username) => {
@@ -211,23 +213,30 @@ io.emit("updateAttendanceCount", attendanceCount);
   });
 
   socket.on("vote", (username, choice) => {
-    if (!isVotingStarted) return socket.emit("errorMessage", "Oylama başlamadı!");
-    if (hasVoted[username]) return socket.emit("errorMessage", "Zaten oy kullandınız!");
-    
+    if (!isVotingStarted) {
+        return socket.emit("errorMessage", "Oylama başlamadı!");
+    }
+
+    // Kullanıcı daha önce oy kullandıysa, önceki oy sayısını azalt
+    if (hasVoted[username]) {
+        const previousVote = hasVoted[username];
+        if (previousVote === "Kabul") acceptCount--;
+        if (previousVote === "Red") rejectCount--;
+    }
+
+    // Oy güncelle
     hasVoted[username] = choice;
+
+    // Yeni oyu sayaçlara ekle
+    if (choice === "Kabul") acceptCount++;
+    else if (choice === "Red") rejectCount++;
+
     console.log(`${username} oylamada ${choice} dedi.`);
 
- // Kabul / Red sayılarını güncelle
- if (choice === " Kabul") {
-  acceptCount++;
-} else if (choice === "Red") {
-  rejectCount++;
-}
-
-
+    // Anlık sayıları başkana gönder
     io.emit("voteResult", { username, choice });
-    io.emit("updateVoteCounts", { accept: acceptCount, reject: rejectCount }); // Oylama sonuçları sadece başkan tarafından dinlenecek
-  });
+    io.emit("updateVoteCounts", { accept: acceptCount, reject: rejectCount });
+});
 
   socket.on("approveRequest", (username) => {
     console.log(`${username} söz hakkı onaylandı.`);
@@ -241,13 +250,19 @@ io.emit("updateAttendanceCount", attendanceCount);
     if (username) {
         console.log(`Kullanıcı ayrıldı: ${username}`);
         delete connectedUsers[socket.id]; // Kullanıcıyı listeden kaldır
-  
-        
+
+        // Eğer söz isteği varsa sil
+        if (hasRequestedToSpeak[username]) {
+            delete hasRequestedToSpeak[username];
+            console.log(`${username} ayrıldı, söz talebi iptal edildi.`);
+
+            // Başkan ekranındaki istek listesini güncelle
+            io.emit("updatedRequests", Object.keys(hasRequestedToSpeak));
+        }
     } else {
-     //   console.log(`Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ${socket.id})`);
+        console.log(`Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ${socket.id})`);
     }
-   
-  });
+});
 
 
   socket.on("addParticipant", async (data) => {

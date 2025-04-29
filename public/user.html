@@ -97,7 +97,7 @@
                 reverseButtons: true
             }).then((result) => {
                 if (result.isConfirmed) {
-                    socket.emit("vote", username, " Kabul");
+                    socket.emit("vote", username, "Kabul");
                 } else if (result.dismiss === Swal.DismissReason.cancel) {
                     socket.emit("vote", username, "Red");
                 }

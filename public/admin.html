@@ -169,11 +169,20 @@
             requestDiv.appendChild(item);
         });
 
-        socket.on("voteResult", (voteData) => {
+        socket.on("voteResult", ({ username, choice }) => {
             const voteDiv = document.getElementById("votes");
-            const item = document.createElement("div");
-            item.innerText = `${voteData.username}: ${voteData.choice}`;
-            voteDiv.appendChild(item);
+            let existingItem = document.getElementById(`vote-${username}`);
+        
+            if (existingItem) {
+                // Kullanıcı zaten listede varsa, sadece oyunu güncelle
+                existingItem.innerText = `${username}: ${choice}`;
+            } else {
+                // Yeni kullanıcıysa yeni satır oluştur
+                const item = document.createElement("div");
+                item.id = `vote-${username}`; // Her kullanıcıya özel ID
+                item.innerText = `${username}: ${choice}`;
+                voteDiv.appendChild(item);
+            }
         });
 
         socket.on("updatedRequests", (requestList) => {

@@ -45,13 +45,26 @@
         console.log(message);
     });
     
-
+    let hasRequestedToSpeak = false;
         // Söz isteme fonksiyonu
         function requestToSpeak() {
             if (!isMeetingStarted) {
-                alert("Toplantı henüz başlatılmadı.");
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Toplantı Başlamadı',
+                    text: 'Söz isteyebilmeniz için toplantının başlaması gerekiyor.'
+                });
                 return;
             }
+            if (hasRequestedToSpeak) {
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Söz Talebiniz Bulunmaktadır.',
+                    text: 'Söz talebiniz alındı, lütfen bekleyin.'
+                });
+                return;
+            }
+            hasRequestedToSpeak = true; 
             socket.emit("requestToSpeak", username);
             const messageDiv = document.getElementById("requestMessage");
             messageDiv.style.display = "block";  // Mesajı görünür yap
@@ -91,6 +104,7 @@
             });
         }
 
+        let hasJoinedAttendance = false;
         // Yoklama fonksiyonu
         function markAttendance() {
             if (!isAttendanceStarted) {
@@ -98,6 +112,15 @@
                     icon: 'warning',
                     title: 'Yoklama Henüz Başlamadı!',
                     text: 'Başkanın yoklamayı başlatmasını bekleyin.'
+                });
+                return;
+            }
+
+            if (hasJoinedAttendance) {
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Zaten Katıldınız',
+                    text: 'Yoklamaya zaten katıldınız.'
                 });
                 return;
             }
@@ -112,6 +135,7 @@
                 reverseButtons: true
             }).then((result) => {
                 if (result.isConfirmed) {
+                    hasJoinedAttendance = true;
                     socket.emit("attendance", username);
                     Swal.fire({
                         icon: 'success',
@@ -131,6 +155,7 @@
         });
 
         socket.on("meetingEnded", () => {
+            isMeetingStarted = false;
             document.getElementById("meetingStatus").innerText = "Toplantı bitti!";
         });
 
@@ -140,6 +165,8 @@
         });
 
         socket.on("attendanceEnded", () => {
+            isAttendanceStarted = false;
+            hasJoinedAttendance = false;
             document.getElementById("attendanceStatus").innerText = "Yoklama bitti!";
         });
 
@@ -149,12 +176,14 @@
         });
 
         socket.on("votingEnded", () => {
+             isVotingStarted = false;
             document.getElementById("votingStatus").innerText = "Oylama bitti!";
         });
 
   
         socket.on("requestApproved", (approvedUsername) => {
           if (approvedUsername.username===username){
+            hasRequestedToSpeak = false;
             const speakMessageDiv = document.getElementById("speakMessage");
             speakMessageDiv.style.display = "block";  // Mesajı görünür yap
             speakMessageDiv.innerHTML = `Söz Sizde Konuşabilirsiniz...`; 

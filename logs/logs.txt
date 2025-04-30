@@ -1054,3 +1054,116 @@
 [30.04.2025 10:07:44] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: E3m6aox1shUwegR6AAAR)
 [30.04.2025 10:07:50] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: fWPUz8jCspaLMLfRAAAT)
 [30.04.2025 10:07:57] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: w2N5RsUTuRjjzqy7AAAV)
+[30.04.2025 11:32:27] 🚀 Server 3000 portunda çalışıyor!
+[30.04.2025 11:32:27] ✅ MongoDB bağlantısı başarılı!
+[30.04.2025 11:33:19] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 11:33:32] Kullanıcı bağlandı: berenisci
+[30.04.2025 11:33:45] Toplantı başladı!
+[30.04.2025 11:33:46] gülhanisci söz istedi.
+[30.04.2025 11:33:49] berenisci söz istedi.
+[30.04.2025 11:34:04] berenisci söz hakkı onaylandı.
+[30.04.2025 11:34:11] berenisci söz istedi.
+[30.04.2025 11:34:23] Toplantı sona erdi!
+[30.04.2025 11:34:24] Oylama başladı!
+[30.04.2025 11:34:26] gülhanisci oylamada Red dedi.
+[30.04.2025 11:34:29] berenisci oylamada Kabul dedi.
+[30.04.2025 11:34:33] gülhanisci oylamada Kabul dedi.
+[30.04.2025 11:34:37] berenisci oylamada Red dedi.
+[30.04.2025 11:34:39] gülhanisci oylamada Red dedi.
+[30.04.2025 11:34:43] Oylama sona erdi! PDF oluşturuluyor...
+[30.04.2025 11:34:44] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1746002083995.pdf
+[30.04.2025 11:34:51] Yoklama başladı!
+[30.04.2025 11:34:54] gülhanisci yoklamaya katıldı.
+[30.04.2025 11:35:01] berenisci yoklamaya katıldı.
+[30.04.2025 11:35:03] Yoklama sona erdi! PDF oluşturuluyor...
+[30.04.2025 11:35:03] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1746002103854.pdf
+[30.04.2025 11:35:14] Oylama sona erdi! PDF oluşturuluyor...
+[30.04.2025 11:35:28] Oylama başladı!
+[30.04.2025 11:35:30] gülhanisci oylamada Red dedi.
+[30.04.2025 11:35:33] gülhanisci oylamada Kabul dedi.
+[30.04.2025 11:35:36] Oylama sona erdi! PDF oluşturuluyor...
+[30.04.2025 11:35:36] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1746002136647.pdf
+[30.04.2025 11:35:38] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 11:35:38] Kullanıcı ayrıldı: berenisci
+[30.04.2025 11:35:39] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: BoDR1WNIoS4ieQfYAAAB)
+[30.04.2025 11:41:33] 🚀 Server 3000 portunda çalışıyor!
+[30.04.2025 11:41:33] ✅ MongoDB bağlantısı başarılı!
+[30.04.2025 11:42:07] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 11:42:14] Kullanıcı bağlandı: berenisci
+[30.04.2025 11:42:35] Toplantı başladı!
+[30.04.2025 11:42:40] Toplantı sona erdi!
+[30.04.2025 11:42:41] Oylama başladı!
+[30.04.2025 11:42:45] gülhanisci oylamada Kabul dedi.
+[30.04.2025 11:42:48] berenisci oylamada Red dedi.
+[30.04.2025 11:42:52] Oylama sona erdi! PDF oluşturuluyor...
+[30.04.2025 11:42:52] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1746002572783.pdf
+[30.04.2025 11:42:55] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: Ftn5lVxLXvoppFcoAAAD)
+[30.04.2025 11:42:56] Kullanıcı ayrıldı: berenisci
+[30.04.2025 11:42:57] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 11:51:31] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 11:51:35] Kullanıcı bağlandı: berenisci
+[30.04.2025 11:53:11] Kullanıcı ayrıldı: berenisci
+[30.04.2025 11:53:13] Kullanıcı bağlandı: berenisci
+[30.04.2025 11:53:15] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 11:53:16] Kullanıcı bağlandı: berenisci
+[30.04.2025 11:53:18] Toplantı başladı!
+[30.04.2025 11:53:21] Kullanıcı ayrıldı: berenisci
+[30.04.2025 11:53:23] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 11:53:27] gülhanisci söz istedi.
+[30.04.2025 11:53:28] berenisci söz istedi.
+[30.04.2025 11:55:25] Toplantı sona erdi!
+[30.04.2025 11:55:30] Oylama başladı!
+[30.04.2025 11:55:33] gülhanisci oylamada Kabul dedi.
+[30.04.2025 11:55:35] berenisci oylamada Red dedi.
+[30.04.2025 11:55:39] berenisci oylamada Kabul dedi.
+[30.04.2025 11:55:43] gülhanisci oylamada Red dedi.
+[30.04.2025 11:55:46] gülhanisci oylamada Kabul dedi.
+[30.04.2025 11:55:50] Oylama sona erdi! PDF oluşturuluyor...
+[30.04.2025 11:55:50] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1746003350020.pdf
+[30.04.2025 11:55:52] Yoklama başladı!
+[30.04.2025 11:55:56] gülhanisci yoklamaya katıldı.
+[30.04.2025 11:56:00] berenisci yoklamaya katıldı.
+[30.04.2025 11:56:06] Yoklama sona erdi! PDF oluşturuluyor...
+[30.04.2025 11:56:06] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1746003366497.pdf
+[30.04.2025 11:56:08] Kullanıcı ayrıldı: berenisci
+[30.04.2025 11:56:09] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 11:56:10] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: CKAKxWum5c1vXrKcAAAH)
+[30.04.2025 12:02:39] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 12:02:41] Toplantı başladı!
+[30.04.2025 12:02:43] gülhanisci söz istedi.
+[30.04.2025 12:02:49] Toplantı sona erdi!
+[30.04.2025 12:02:51] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 12:02:53] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: QJCN4g1oM3PSe7jNAAAT)
+[30.04.2025 12:04:26] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 83-ApfMMlxRXctJVAAAX)
+[30.04.2025 12:04:38] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 12:04:39] Toplantı başladı!
+[30.04.2025 12:04:40] gülhanisci söz istedi.
+[30.04.2025 12:04:50] gülhanisci ayrıldı, söz talebi iptal edildi.
+[30.04.2025 12:04:50] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 12:04:52] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: zc1mhWQj73ZpZLz1AAAZ)
+[30.04.2025 12:07:39] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 12:07:41] Toplantı başladı!
+[30.04.2025 12:07:43] gülhanisci söz istedi.
+[30.04.2025 12:07:54] Kullanıcı bağlandı: berenisci
+[30.04.2025 12:07:55] berenisci söz istedi.
+[30.04.2025 12:08:21] berenisci söz hakkı onaylandı.
+[30.04.2025 12:08:23] berenisci söz istedi.
+[30.04.2025 12:08:38] Toplantı sona erdi!
+[30.04.2025 12:08:41] Kullanıcı ayrıldı: berenisci
+[30.04.2025 12:08:42] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 12:08:43] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 55YocjnCdfVMPkfcAAAd)
+[30.04.2025 12:10:30] Kullanıcı bağlandı: berenisci
+[30.04.2025 12:10:32] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 12:10:41] Oylama başladı!
+[30.04.2025 12:10:43] gülhanisci oylamada Kabul dedi.
+[30.04.2025 12:10:45] berenisci oylamada Red dedi.
+[30.04.2025 12:10:58] Oylama sona erdi! PDF oluşturuluyor...
+[30.04.2025 12:10:58] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1746004258540.pdf
+[30.04.2025 12:11:00] Yoklama başladı!
+[30.04.2025 12:11:03] gülhanisci yoklamaya katıldı.
+[30.04.2025 12:11:05] berenisci yoklamaya katıldı.
+[30.04.2025 12:11:22] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 12:11:23] Kullanıcı ayrıldı: berenisci
+[30.04.2025 12:11:25] Yoklama sona erdi! PDF oluşturuluyor...
+[30.04.2025 12:11:25] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1746004285916.pdf
+[30.04.2025 12:11:30] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: t74CFn5pLJGCWYr8AAAj)

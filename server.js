@@ -173,7 +173,8 @@ socket.on("endVoting", () => {
   rejectCount = 0;
   hasVoted = {};
   isVotingStarted = false;
-
+  
+  io.emit("updatedVotes", []); // Burada boş liste gönderiyoruz
   io.emit("votingEnded");
   io.emit("updateVoteCounts", { accept: 0, reject: 0 }); // Sayaçları sıfırla
 });

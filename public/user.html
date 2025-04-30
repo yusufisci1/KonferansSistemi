@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <button class="logout-button" onclick="logout()">⎋ Çıkış Yap</button>
     <div class="container">
         <h1>Kullanıcı Paneli</h1>
         <p>Hoş geldiniz, <span id="usernameDisplay">...</span></p>
@@ -198,6 +199,16 @@
          
 
         });
+
+        // Giriş yapılmamışsa login ekranına yönlendir
+if (!localStorage.getItem("username")) {
+    window.location.href = "login.html";
+}
+
+function logout() {
+    localStorage.removeItem("username");
+    window.location.href = "login.html";
+}
     </script>
 </body>
 </html>

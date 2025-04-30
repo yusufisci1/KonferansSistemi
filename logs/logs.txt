@@ -1002,3 +1002,55 @@
 [29.04.2025 15:55:55] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1745931355201.pdf
 [29.04.2025 15:56:01] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: NZZXgOxxWhy7C8DxAAAB)
 [29.04.2025 15:56:11] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ztMJenEnAWnr2P4CAAAJ)
+[29.04.2025 17:24:05] 🚀 Server 3000 portunda çalışıyor!
+[29.04.2025 17:24:05] ✅ MongoDB bağlantısı başarılı!
+[29.04.2025 17:24:48] Kullanıcı bağlandı: berenisci
+[29.04.2025 17:24:54] Kullanıcı bağlandı: gülhanisci
+[29.04.2025 17:24:56] Toplantı başladı!
+[29.04.2025 17:25:17] berenisci söz istedi.
+[29.04.2025 17:25:36] berenisci söz hakkı onaylandı.
+[29.04.2025 17:25:42] berenisci söz istedi.
+[29.04.2025 17:25:56] Oylama başladı!
+[29.04.2025 17:26:06] berenisci oylamada Kabul dedi.
+[29.04.2025 17:26:17] berenisci oylamada Red dedi.
+[29.04.2025 17:26:19] berenisci oylamada Kabul dedi.
+[29.04.2025 17:26:21] berenisci oylamada Red dedi.
+[29.04.2025 17:26:26] gülhanisci oylamada Kabul dedi.
+[29.04.2025 17:26:29] gülhanisci oylamada Red dedi.
+[29.04.2025 17:26:31] gülhanisci oylamada Kabul dedi.
+[29.04.2025 17:26:33] Oylama sona erdi! PDF oluşturuluyor...
+[29.04.2025 17:26:33] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1745936793689.pdf
+[29.04.2025 17:26:39] Yoklama başladı!
+[29.04.2025 17:26:44] berenisci yoklamaya katıldı.
+[29.04.2025 17:26:54] gülhanisci yoklamaya katıldı.
+[29.04.2025 17:26:57] Yoklama sona erdi! PDF oluşturuluyor...
+[29.04.2025 17:26:57] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1745936817336.pdf
+[29.04.2025 17:27:12] Toplantı sona erdi!
+[29.04.2025 17:27:15] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: yv-_A42qwqx9olxzAAAB)
+[29.04.2025 17:27:36] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: oT-cYxaMoAhgkGhzAAAH)
+[29.04.2025 17:28:03] Kullanıcı ayrıldı: berenisci
+[29.04.2025 17:28:04] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 10:03:00] 🚀 Server 3000 portunda çalışıyor!
+[30.04.2025 10:03:01] ✅ MongoDB bağlantısı başarılı!
+[30.04.2025 10:03:20] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 10:03:41] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 10:03:42] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 0SpReEEckdiL44mSAAAB)
+[30.04.2025 10:05:04] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 10:05:05] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 10:05:06] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 10:05:08] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 10:05:18] Toplantı başladı!
+[30.04.2025 10:05:20] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 10:05:22] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 10:05:23] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 10:05:24] gülhanisci söz istedi.
+[30.04.2025 10:05:28] gülhanisci ayrıldı, söz talebi iptal edildi.
+[30.04.2025 10:05:28] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 10:05:29] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 10:05:39] gülhanisci söz istedi.
+[30.04.2025 10:05:42] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 10:05:42] gülhanisci ayrıldı, söz talebi iptal edildi.
+[30.04.2025 10:05:51] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: L9i_SHEQock5XJ3NAAAJ)
+[30.04.2025 10:07:44] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: E3m6aox1shUwegR6AAAR)
+[30.04.2025 10:07:50] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: fWPUz8jCspaLMLfRAAAT)
+[30.04.2025 10:07:57] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: w2N5RsUTuRjjzqy7AAAV)

@@ -1167,3 +1167,328 @@
 [30.04.2025 12:11:25] Yoklama sona erdi! PDF oluşturuluyor...
 [30.04.2025 12:11:25] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1746004285916.pdf
 [30.04.2025 12:11:30] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: t74CFn5pLJGCWYr8AAAj)
+[30.04.2025 12:15:24] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 12:15:28] Kullanıcı bağlandı: berenisci
+[30.04.2025 12:15:35] Kullanıcı bağlandı: baharisci
+[30.04.2025 12:15:45] Toplantı başladı!
+[30.04.2025 12:15:56] gülhanisci söz istedi.
+[30.04.2025 12:15:59] baharisci söz istedi.
+[30.04.2025 12:16:01] berenisci söz istedi.
+[30.04.2025 12:16:14] berenisci söz hakkı onaylandı.
+[30.04.2025 12:16:22] berenisci söz istedi.
+[30.04.2025 12:16:34] Toplantı sona erdi!
+[30.04.2025 12:16:39] Oylama başladı!
+[30.04.2025 12:16:42] gülhanisci oylamada Kabul dedi.
+[30.04.2025 12:16:44] baharisci oylamada Kabul dedi.
+[30.04.2025 12:16:46] berenisci oylamada Kabul dedi.
+[30.04.2025 12:16:58] berenisci oylamada Red dedi.
+[30.04.2025 12:17:00] berenisci oylamada Kabul dedi.
+[30.04.2025 12:17:04] berenisci oylamada Red dedi.
+[30.04.2025 12:17:12] baharisci oylamada Red dedi.
+[30.04.2025 12:17:14] gülhanisci oylamada Red dedi.
+[30.04.2025 12:17:20] Oylama sona erdi! PDF oluşturuluyor...
+[30.04.2025 12:17:20] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1746004640256.pdf
+[30.04.2025 12:17:22] Yoklama başladı!
+[30.04.2025 12:17:26] gülhanisci yoklamaya katıldı.
+[30.04.2025 12:17:31] baharisci yoklamaya katıldı.
+[30.04.2025 12:17:34] berenisci yoklamaya katıldı.
+[30.04.2025 12:17:43] Yoklama sona erdi! PDF oluşturuluyor...
+[30.04.2025 12:17:43] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1746004663278.pdf
+[30.04.2025 12:17:44] Oylama başladı!
+[30.04.2025 12:17:46] gülhanisci oylamada Kabul dedi.
+[30.04.2025 12:17:48] gülhanisci oylamada Red dedi.
+[30.04.2025 12:17:49] gülhanisci oylamada Kabul dedi.
+[30.04.2025 12:17:52] Oylama sona erdi! PDF oluşturuluyor...
+[30.04.2025 12:17:52] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1746004672558.pdf
+[30.04.2025 12:17:57] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ME-RbH-QnTDTjBmQAAAp)
+[30.04.2025 12:18:20] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: R4kvpYT8y_7uX4AnAAAx)
+[30.04.2025 12:18:57] Kullanıcı ayrıldı: berenisci
+[30.04.2025 12:18:58] Kullanıcı ayrıldı: baharisci
+[30.04.2025 12:18:59] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 12:19:02] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: Ud68Zq_f6cM-1bUsAAAz)
+[30.04.2025 12:19:56] Kullanıcı bağlandı: berenisci
+[30.04.2025 12:20:01] Kullanıcı ayrıldı: berenisci
+[30.04.2025 12:20:05] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: T9NIIxJDeWB2OPsLAAA1)
+[30.04.2025 12:20:48] Kullanıcı bağlandı: berenisci
+[30.04.2025 12:21:04] Kullanıcı ayrıldı: berenisci
+[30.04.2025 12:21:07] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: -U3hjL3Jjy8ssVJsAAA5)
+[30.04.2025 12:28:00] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: QcbB7-O187TqwO0mAAA9)
+[30.04.2025 12:28:37] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: mKuOL7-TdR_K1FtEAAA_)
+[30.04.2025 14:26:18] Kullanıcı bağlandı: berenisci
+[30.04.2025 14:26:19] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 14:26:20] Kullanıcı bağlandı: erenisci
+[30.04.2025 14:26:40] Toplantı başladı!
+[30.04.2025 14:26:56] erenisci söz istedi.
+[30.04.2025 14:27:00] gülhanisci söz istedi.
+[30.04.2025 14:27:03] berenisci söz istedi.
+[30.04.2025 14:27:21] berenisci söz hakkı onaylandı.
+[30.04.2025 14:27:28] berenisci söz istedi.
+[30.04.2025 14:27:42] berenisci söz hakkı onaylandı.
+[30.04.2025 14:27:49] berenisci söz istedi.
+[30.04.2025 14:27:57] Toplantı sona erdi!
+[30.04.2025 14:28:05] Oylama başladı!
+[30.04.2025 14:28:09] berenisci oylamada Kabul dedi.
+[30.04.2025 14:28:15] gülhanisci oylamada Red dedi.
+[30.04.2025 14:28:18] erenisci oylamada Kabul dedi.
+[30.04.2025 14:28:36] berenisci oylamada Red dedi.
+[30.04.2025 14:28:39] berenisci oylamada Kabul dedi.
+[30.04.2025 14:28:43] berenisci oylamada Red dedi.
+[30.04.2025 14:28:53] Oylama sona erdi! PDF oluşturuluyor...
+[30.04.2025 14:28:53] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1746012533861.pdf
+[30.04.2025 14:28:56] Yoklama başladı!
+[30.04.2025 14:28:59] berenisci yoklamaya katıldı.
+[30.04.2025 14:29:02] gülhanisci yoklamaya katıldı.
+[30.04.2025 14:29:05] erenisci yoklamaya katıldı.
+[30.04.2025 14:29:16] Yoklama sona erdi! PDF oluşturuluyor...
+[30.04.2025 14:29:16] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1746012556684.pdf
+[30.04.2025 14:29:19] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ehTcH2Pa7Gk92VnTAABB)
+[30.04.2025 14:29:56] Kullanıcı ayrıldı: erenisci
+[30.04.2025 14:30:01] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: -U_nq23z17JwmHopAABJ)
+[30.04.2025 14:30:31] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: PlPNdQ5GXA-EFRpMAABM)
+[30.04.2025 14:30:39] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: -NOFGPahpVWXXj-9AABO)
+[30.04.2025 14:30:41] Kullanıcı ayrıldı: berenisci
+[30.04.2025 14:30:42] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 14:30:45] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: z7IxJKEL5z4Li79oAABQ)
+[30.04.2025 14:32:59] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: AtgOssm6iLVAEF5nAABS)
+[30.04.2025 14:33:28] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 14:33:39] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 14:33:40] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: vnvNqLt0NfsEdtamAABU)
+[30.04.2025 14:37:24] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: XHOb9JerydH2g6L3AABY)
+[30.04.2025 14:38:33] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: Z9gHjxYiRaH-BUCMAABa)
+[30.04.2025 14:41:46] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ZU8TUX3dQcvQ5spoAABc)
+[30.04.2025 14:41:49] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: f8LMltvJid5SK_tYAABe)
+[30.04.2025 14:42:08] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: OAw37-zWmbDGqxFiAABg)
+[30.04.2025 21:57:31] 🚀 Server 3000 portunda çalışıyor!
+[30.04.2025 21:57:31] ✅ MongoDB bağlantısı başarılı!
+[30.04.2025 22:00:17] Kullanıcı bağlandı: gülhanisci
+[30.04.2025 22:00:22] Kullanıcı bağlandı: berenisci
+[30.04.2025 22:00:26] Kullanıcı bağlandı: erenisci
+[30.04.2025 22:00:32] Kullanıcı bağlandı: baharisci
+[30.04.2025 22:01:17] Toplantı başladı!
+[30.04.2025 22:01:24] gülhanisci söz istedi.
+[30.04.2025 22:01:25] berenisci söz istedi.
+[30.04.2025 22:01:29] baharisci söz istedi.
+[30.04.2025 22:01:31] erenisci söz istedi.
+[30.04.2025 22:01:43] erenisci söz hakkı onaylandı.
+[30.04.2025 22:02:04] erenisci söz istedi.
+[30.04.2025 22:02:47] Toplantı sona erdi!
+[30.04.2025 22:03:02] Oylama başladı!
+[30.04.2025 22:03:05] gülhanisci oylamada Kabul dedi.
+[30.04.2025 22:03:16] berenisci oylamada Kabul dedi.
+[30.04.2025 22:03:19] baharisci oylamada Kabul dedi.
+[30.04.2025 22:03:21] erenisci oylamada Kabul dedi.
+[30.04.2025 22:03:30] baharisci oylamada Red dedi.
+[30.04.2025 22:03:34] erenisci oylamada Red dedi.
+[30.04.2025 22:03:43] erenisci oylamada Kabul dedi.
+[30.04.2025 22:03:46] baharisci oylamada Kabul dedi.
+[30.04.2025 22:03:50] baharisci oylamada Red dedi.
+[30.04.2025 22:03:53] erenisci oylamada Red dedi.
+[30.04.2025 22:03:59] Oylama sona erdi! PDF oluşturuluyor...
+[30.04.2025 22:03:59] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1746039839363.pdf
+[30.04.2025 22:04:13] Yoklama başladı!
+[30.04.2025 22:04:16] gülhanisci yoklamaya katıldı.
+[30.04.2025 22:04:18] berenisci yoklamaya katıldı.
+[30.04.2025 22:04:22] erenisci yoklamaya katıldı.
+[30.04.2025 22:04:25] baharisci yoklamaya katıldı.
+[30.04.2025 22:04:41] Yoklama sona erdi! PDF oluşturuluyor...
+[30.04.2025 22:04:41] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1746039881625.pdf
+[30.04.2025 22:04:49] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 10W5loV9FGPN1OAzAAAB)
+[30.04.2025 22:05:13] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: wWVE5-lc9wA6cF2_AAAL)
+[30.04.2025 22:05:59] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 6-6aYENHwdCY1xVlAAAN)
+[30.04.2025 22:06:08] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: d-2FTm4as8MSmjvpAAAP)
+[30.04.2025 22:06:25] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 5scbVq3fytm7i_VRAAAR)
+[30.04.2025 22:06:30] Kullanıcı ayrıldı: berenisci
+[30.04.2025 22:06:34] Kullanıcı ayrıldı: gülhanisci
+[30.04.2025 22:06:39] Kullanıcı ayrıldı: erenisci
+[30.04.2025 22:06:41] Kullanıcı ayrıldı: baharisci
+[30.04.2025 22:09:49] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 09:51:13] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 09:51:13] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 09:52:24] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: bhcBuU2t2wS4I6uKAAAB)
+[01.05.2025 09:54:18] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: kGtY1OSi-i2wtXtCAAAD)
+[01.05.2025 09:54:20] Kullanıcı bağlandı: berenisci
+[01.05.2025 09:54:22] Kullanıcı ayrıldı: berenisci
+[01.05.2025 09:55:30] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 5yQbVyT_m5Y6bmxPAAAH)
+[01.05.2025 09:56:01] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: asdb4zFSStUCuXL6AAAJ)
+[01.05.2025 09:57:26] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: P7phfC8zLiYlPXsNAAAL)
+[01.05.2025 09:57:53] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 5Ud6Js0zVXzwhRpJAAAN)
+[01.05.2025 09:58:16] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 3Z6KFFT4o1Hpx9utAAAP)
+[01.05.2025 09:58:32] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: VuSBuHA5ykMZQ13lAAAR)
+[01.05.2025 10:07:19] Kullanıcı bağlandı: berenisci
+[01.05.2025 10:08:51] Toplantı başladı!
+[01.05.2025 10:08:55] Kullanıcı bağlandı: berenisci
+[01.05.2025 10:08:58] Kullanıcı ayrıldı: berenisci
+[01.05.2025 10:08:59] berenisci söz istedi.
+[01.05.2025 10:09:05] Kullanıcı bağlandı: gülhanisci
+[01.05.2025 10:09:06] gülhanisci söz istedi.
+[01.05.2025 10:09:14] Kullanıcı bağlandı: baharisci
+[01.05.2025 10:09:21] Kullanıcı bağlandı: erenisci
+[01.05.2025 10:09:25] baharisci söz istedi.
+[01.05.2025 10:09:27] erenisci söz istedi.
+[01.05.2025 10:26:08] Oylama başladı!
+[01.05.2025 10:26:15] berenisci oylamada Red dedi.
+[01.05.2025 10:26:18] gülhanisci oylamada Kabul dedi.
+[01.05.2025 10:26:21] baharisci oylamada Red dedi.
+[01.05.2025 10:26:24] erenisci oylamada Kabul dedi.
+[01.05.2025 10:39:46] Kullanıcı ayrıldı: erenisci
+[01.05.2025 10:39:46] erenisci ayrıldı, söz talebi iptal edildi.
+[01.05.2025 10:39:46] Kullanıcı ayrıldı: baharisci
+[01.05.2025 10:39:46] baharisci ayrıldı, söz talebi iptal edildi.
+[01.05.2025 10:57:51] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: fXfE859btjyCzkY_AAAT)
+[01.05.2025 10:57:51] Kullanıcı ayrıldı: berenisci
+[01.05.2025 10:57:51] berenisci ayrıldı, söz talebi iptal edildi.
+[01.05.2025 10:57:51] Kullanıcı ayrıldı: gülhanisci
+[01.05.2025 10:57:51] gülhanisci ayrıldı, söz talebi iptal edildi.
+[01.05.2025 11:10:34] Yoklama sona erdi! PDF oluşturuluyor...
+[01.05.2025 11:10:36] Yoklama başladı!
+[01.05.2025 11:10:39] berenisci yoklamaya katıldı.
+[01.05.2025 11:10:41] gülhanisci yoklamaya katıldı.
+[01.05.2025 11:10:44] baharisci yoklamaya katıldı.
+[01.05.2025 11:10:49] erenisci yoklamaya katıldı.
+[01.05.2025 11:56:20] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: s9gK0A27QNZNKT07AAAl)
+[01.05.2025 11:56:20] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: WTaaNh_aFdkCi_W3AAAm)
+[01.05.2025 11:56:21] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 2gaZkU7igkaE-pwcAAAk)
+[01.05.2025 11:56:22] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: DD7d_73DFd38WJCLAAAj)
+[01.05.2025 11:56:24] Yoklama sona erdi! PDF oluşturuluyor...
+[01.05.2025 11:56:24] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1746089784231.pdf
+[01.05.2025 11:56:25] Oylama sona erdi! PDF oluşturuluyor...
+[01.05.2025 11:56:25] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1746089785010.pdf
+[01.05.2025 11:56:26] Toplantı sona erdi!
+[01.05.2025 11:59:05] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: dJdwaR8kzkAbAzrIAAAn)
+[01.05.2025 12:05:28] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 1BnXKuoARN22mrVYAAAp)
+[01.05.2025 13:05:04] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 13:05:04] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 13:05:21] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: KySRXKJsRbyD9PTNAAAB)
+[01.05.2025 13:05:30] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: -SY6-ckNa2kmdHY1AAAD)
+[01.05.2025 13:10:10] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 13:10:10] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 13:10:16] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: AVoRXCei6sVee54qAAAB)
+[01.05.2025 13:10:17] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: HCEKzHAk69jYIYKlAAAD)
+[01.05.2025 13:10:23] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: cemy2kbLmGmUAizyAAAF)
+[01.05.2025 13:10:28] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: iptlH_DmH0VRw2Q3AAAH)
+[01.05.2025 13:10:50] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: QrEnx_EFbTqsr2JUAAAJ)
+[01.05.2025 13:20:24] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 13:20:24] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 13:21:17] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: WhlSkXD38z0ao-h-AAAB)
+[01.05.2025 13:21:22] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: xf_eoSnW2db4HJqdAAAD)
+[01.05.2025 13:21:23] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: G6P3amjuMkDkfL-VAAAF)
+[01.05.2025 13:21:26] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: tALtnlp6yRPUcCCpAAAH)
+[01.05.2025 13:21:41] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: XUGy2A0OnNCsAje4AAAJ)
+[01.05.2025 13:24:11] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 9joQYYhZKyyalYkyAAAL)
+[01.05.2025 13:24:30] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: AlM8wDUS7JLxJC-2AAAN)
+[01.05.2025 13:24:40] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: S2qoeLqq6vsGUYGoAAAP)
+[01.05.2025 13:29:36] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 13:29:36] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 13:30:35] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: u3Yd40PqXMAmOffHAAAB)
+[01.05.2025 13:30:39] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: yiryp_HvxBkvPxU-AAAD)
+[01.05.2025 13:30:44] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: Ns_qg1WnNoXzHLkVAAAF)
+[01.05.2025 13:34:57] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 13:34:57] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 13:37:06] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: rov7A0AANns1VqPPAAAB)
+[01.05.2025 13:42:16] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 13:42:16] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 13:42:31] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: cHND2rukv-oBxyEGAAAB)
+[01.05.2025 13:46:39] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: _MHRMqN8Ynmhc5NUAAAD)
+[01.05.2025 13:46:48] Kullanıcı bağlandı: gülhanisci
+[01.05.2025 13:46:52] Toplantı başladı!
+[01.05.2025 13:46:54] gülhanisci söz istedi.
+[01.05.2025 13:47:00] Kullanıcı ayrıldı: gülhanisci
+[01.05.2025 13:47:00] gülhanisci ayrıldı, söz talebi iptal edildi.
+[01.05.2025 13:52:38] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 13:52:38] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 13:52:43] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: Nsh6-DfQYqqr9OuKAAAB)
+[01.05.2025 13:52:48] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: idEVm3ZnlS42xU2MAAAD)
+[01.05.2025 13:52:51] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: -KjCVeJ_f8FRdbGuAAAF)
+[01.05.2025 13:52:53] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: HjhDqK2rEgyHmdgIAAAH)
+[01.05.2025 13:53:04] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 13:53:04] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 13:56:20] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 13:56:20] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 13:57:03] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: c8TcHZI2NHYTwfTFAAAB)
+[01.05.2025 13:59:47] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 13:59:47] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 14:00:19] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 14:00:19] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 14:01:38] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: aq6HeXDYJBzwU_6QAAAB)
+[01.05.2025 14:01:43] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: FVH2BoBK7XGOUnNuAAAD)
+[01.05.2025 14:01:46] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: sxBwtZBDSC_HIKKgAAAF)
+[01.05.2025 14:02:19] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 14:02:19] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 14:03:10] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 14:03:10] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 14:03:41] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: eajfGbW5vFxkjcnnAAAB)
+[01.05.2025 14:04:30] ✅ Yeni kullanıcı eklendi: bernaisci
+[01.05.2025 14:04:59] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: yFHwWBBg5L0cVNs8AAAD)
+[01.05.2025 14:05:08] Kullanıcı bağlandı: bernaisci
+[01.05.2025 14:05:11] Kullanıcı ayrıldı: bernaisci
+[01.05.2025 14:05:18] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: acHmz7w_JGPdk2AcAAAF)
+[01.05.2025 14:06:00] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: CyIkKwbVXX2hT2FoAAAJ)
+[01.05.2025 14:12:54] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 14:12:54] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 14:13:46] Kullanıcı bağlandı: gülhanisci
+[01.05.2025 14:13:49] Kullanıcı bağlandı: berenisci
+[01.05.2025 14:14:00] Toplantı başladı!
+[01.05.2025 14:14:03] gülhanisci söz istedi.
+[01.05.2025 14:14:05] berenisci söz istedi.
+[01.05.2025 14:14:11] gülhanisci söz hakkı onaylandı.
+[01.05.2025 14:14:17] berenisci söz hakkı onaylandı.
+[01.05.2025 14:14:25] Toplantı sona erdi!
+[01.05.2025 14:14:27] Oylama başladı!
+[01.05.2025 14:14:30] gülhanisci oylamada Kabul dedi.
+[01.05.2025 14:14:32] berenisci oylamada Red dedi.
+[01.05.2025 14:14:34] berenisci oylamada Kabul dedi.
+[01.05.2025 14:14:38] Oylama sona erdi! PDF oluşturuluyor...
+[01.05.2025 14:14:38] Oylama sonuçları PDF olarak kaydedildi: public/reports/oylama_1746098078343.pdf
+[01.05.2025 14:15:28] Yoklama başladı!
+[01.05.2025 14:15:31] gülhanisci yoklamaya katıldı.
+[01.05.2025 14:15:33] berenisci yoklamaya katıldı.
+[01.05.2025 14:15:37] Yoklama sona erdi! PDF oluşturuluyor...
+[01.05.2025 14:15:37] Yoklama listesi PDF olarak kaydedildi: public/reports/yoklama_1746098137841.pdf
+[01.05.2025 14:17:55] Kullanıcı ayrıldı: gülhanisci
+[01.05.2025 14:17:56] Kullanıcı ayrıldı: berenisci
+[01.05.2025 14:18:35] Kullanıcı bağlandı: berenisci
+[01.05.2025 14:18:37] Kullanıcı ayrıldı: berenisci
+[01.05.2025 14:18:39] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ouO_pfwhnWzdhIiFAAAB)
+[01.05.2025 16:11:57] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 16:11:57] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 16:12:07] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: EmCCPBkflPRP1gSlAAAB)
+[01.05.2025 16:12:16] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: _XIaOEsDVNQIJAV6AAAD)
+[01.05.2025 16:14:54] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: jy_ugw0n3tbiTIwDAAAF)
+[01.05.2025 16:16:06] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: vGiuaKHT3xfWY6VEAAAH)
+[01.05.2025 16:16:20] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 16:16:20] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 16:21:27] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 16:32:27] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 16:32:27] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 16:32:40] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: IDfIykidG2-Rd0JSAAAB)
+[01.05.2025 16:32:59] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: feM9cmgp2826e_l-AAAD)
+[01.05.2025 16:33:05] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 8_utD9CnT4ZQGBJbAAAF)
+[01.05.2025 16:33:09] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 6JvCw9qxWNpt7YExAAAH)
+[01.05.2025 16:33:10] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: asvgHBCFC6yhlyGNAAAJ)
+[01.05.2025 16:33:52] ✅ Yeni kullanıcı eklendi: durdaneisci
+[01.05.2025 16:33:55] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: gFzExcBsBKSd1leDAAAL)
+[01.05.2025 16:33:57] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: qtg9XzTLFDU4rTGsAAAN)
+[01.05.2025 16:34:14] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ZrDPSzPJIxuPEUMTAAAP)
+[01.05.2025 16:38:22] 🚀 Server 3000 portunda çalışıyor!
+[01.05.2025 16:38:22] ✅ MongoDB bağlantısı başarılı!
+[01.05.2025 16:38:30] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: A9sriSQ4OwH51RtxAAAB)
+[01.05.2025 16:38:35] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: m57n6FILprujOc7RAAAD)
+[01.05.2025 16:38:52] 🗑 Kullanıcı silindi: durdaneisci
+[01.05.2025 16:38:57] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: oIWFT0bQBjcV4oGKAAAF)
+[01.05.2025 16:39:11] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: U28b5TBbgnRRxyLsAAAH)
+[01.05.2025 16:40:07] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: ee-dSndHI1RpWkSaAAAJ)
+[01.05.2025 16:40:09] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: HaOO-djb6wRrD83aAAAL)
+[01.05.2025 16:40:45] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 1O0DgcbwKQ8g9BJlAAAN)
+[01.05.2025 16:40:49] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: nAnbZjoVB7DLH1cxAAAP)
+[01.05.2025 16:45:55] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 35I-PFdP6u2aIjJrAAAT)
+[01.05.2025 16:46:16] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 0V0Tae55wK66Je2_AAAV)
+[01.05.2025 16:46:17] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: EKboT1FysytUMSgaAAAX)
+[01.05.2025 16:46:54] ✅ Yeni kullanıcı eklendi: durdaneisci
+[01.05.2025 16:46:56] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: f0ljnxZ2O5uHSqPzAAAZ)
+[01.05.2025 16:46:57] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: jN9qtm4FZeIXBZwqAAAb)
+[01.05.2025 16:47:04] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: uDh7x1Klj-uC7Gx8AAAd)
+[01.05.2025 16:47:11] Kullanıcı bağlandı: durdaneisci
+[01.05.2025 16:47:14] Kullanıcı ayrıldı: durdaneisci
+[01.05.2025 16:47:19] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: 0D0pW6gXlI_5BFuCAAAf)
+[01.05.2025 16:47:22] 🗑 Kullanıcı silindi: durdaneisci
+[01.05.2025 16:47:25] Bilinmeyen bir kullanıcı ayrıldı (Socket ID: QWTvrx0yPl5nxvt8AAAj)

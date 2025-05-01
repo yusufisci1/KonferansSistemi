@@ -307,6 +307,32 @@ io.emit("updateAttendanceCount", attendanceCount);
     }
 });
 
+
+socket.on("getUserList", async () => {
+  try {
+    const users = await User.find({ role: "user" }); // Sadece role=user
+    socket.emit("userList", users);
+  } catch (error) {
+    console.error("Kullanıcılar getirilirken hata:", error);
+    socket.emit("errorMessage", "Kullanıcı listesi getirilemedi.");
+  }
+});
+
+socket.on("deleteUser", async (username) => {
+  try {
+    const user = await User.findOneAndDelete({ username, role: "user" });
+    if (!user) return socket.emit("errorMessage", "Kullanıcı bulunamadı veya silinemez.");
+
+    console.log(`🗑 Kullanıcı silindi: ${username}`);
+    io.emit("userDeleted", username);
+  } catch (error) {
+    console.error("Kullanıcı silinirken hata:", error);
+    socket.emit("errorMessage", "Kullanıcı silinemedi.");
+  }
+});
+
+
+
 // 📌 LOG KAYITLARINI TARİH ARALIĞINA GÖRE GETİRME ENDPOINT'İ
 app.get("/api/logs", (req, res) => {
   const { startDate, endDate } = req.query;

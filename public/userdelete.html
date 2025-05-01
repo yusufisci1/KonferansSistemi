@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kullanıcı Listesi</title>
+  <link rel="stylesheet" href="styleuserdelete.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <h1>Katılımcı Listesi</h1>
+  <div id="userList">Yükleniyor...</div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+  // Kullanıcıları çek
+  socket.emit("getUserList");
+
+  socket.on("userList", (users) => {
+    const userListDiv = document.getElementById("userList");
+    userListDiv.innerHTML = "";
+
+    users.forEach(user => {
+      const userDiv = document.createElement("div");
+      userDiv.classList.add("user-box");
+      userDiv.innerHTML = `
+        <p><strong>Kullanıcı Adı:</strong> ${user.username}</p>
+        <p><strong>Ad Soyad:</strong> ${user.ad} ${user.soyad}</p>
+        <p><strong>TC:</strong> ${user.tc}</p>
+        <p><strong>Mail:</strong> ${user.mail}</p>
+        <button class="delete-btn" onclick="deleteUser('${user.username}')">Sil</button>
+      `;
+      userListDiv.appendChild(userDiv);
+    });
+  });
+
+  function deleteUser(username) {
+    Swal.fire({
+      title: `${username} silinsin mi?`,
+      text: "Bu işlem geri alınamaz!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Evet, Sil!",
+      cancelButtonText: "İptal",
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        socket.emit("deleteUser", username);
+      }
+    });
+  }
+
+  socket.on("userDeleted", (username) => {
+    Swal.fire({
+      icon: "success",
+      title: "Silindi!",
+      text: `${username} başarıyla silindi.`,
+      timer: 2000,
+      showConfirmButton: false
+    });
+    socket.emit("getUserList");
+  });
+
+  socket.on("errorMessage", (msg) => {
+    Swal.fire({
+      icon: "error",
+      title: "Hata",
+      text: msg
+    });
+  });
+  </script>
+</body>
+</html>
